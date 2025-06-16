@@ -15,19 +15,19 @@ const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const professionalsMenuItems = [
-    { title: 'Quem Somos', href: '/institucional', description: 'Nossa história e missão' },
+    { title: 'Quem Somos', href: '/institucional', description: 'A nossa história e missão' },
     { title: 'Produtos Profissionais', href: '/produtos-profissionais', description: 'Catálogo para clínicas e hospitais' },
-    { title: 'Ciência e Inovação', href: '/ciencia', description: 'Laboratório e pesquisas' },
+    { title: 'Ciência e Inovação', href: '/ciencia', description: 'Laboratório e investigação' },
     { title: 'Distribuição', href: '/distribuicao', description: 'Representantes por região' },
     { title: 'Conteúdo Técnico', href: '/blog-tecnico', description: 'Artigos científicos' }
   ];
 
   const consumersMenuItems = [
-    { title: 'Loja Virtual', href: '/loja', description: 'Compre online com segurança' },
-    { title: 'Nossos Produtos', href: '/produtos', description: 'Linha completa para você' },
+    { title: 'Loja Online', href: '/loja', description: 'Compre online com segurança' },
+    { title: 'Os Nossos Produtos', href: '/produtos', description: 'Linha completa para si' },
     { title: 'Blog de Saúde', href: '/blog', description: 'Dicas e orientações' },
-    { title: 'Parcerias', href: '/parcerias', description: 'Seja um parceiro' },
-    { title: 'Suporte', href: '/suporte', description: 'Atendimento ao cliente' }
+    { title: 'Parcerias', href: '/parcerias', description: 'Seja nosso parceiro' },
+    { title: 'Apoio ao Cliente', href: '/suporte', description: 'Atendimento ao cliente' }
   ];
 
   return (
@@ -82,14 +82,14 @@ const Header = () => {
               <NavigationMenuItem>
                 <NavigationMenuTrigger className="flex items-center text-makelife-teal-dark hover:text-makelife-teal">
                   <User className="w-4 h-4 mr-2" />
-                  Para Você
+                  Para Si
                 </NavigationMenuTrigger>
                 <NavigationMenuContent>
                   <div className="grid gap-3 p-6 w-[500px] bg-makelife-gray-light">
                     <div className="row-span-3">
                       <div className="mb-4">
                         <h4 className="text-lg font-medium text-makelife-teal-dark">Área do Consumidor</h4>
-                        <p className="text-sm text-makelife-gray-medium">Cuidados íntimos para seu bem-estar</p>
+                        <p className="text-sm text-makelife-gray-medium">Cuidados íntimos para o seu bem-estar</p>
                       </div>
                       {consumersMenuItems.map((item) => (
                         <Link
@@ -116,7 +116,7 @@ const Header = () => {
               </NavigationMenuItem>
               <NavigationMenuItem>
                 <Link to="/contato" className="text-makelife-teal-dark hover:text-makelife-teal font-medium">
-                  Contato
+                  Contacto
                 </Link>
               </NavigationMenuItem>
             </NavigationMenuList>
@@ -134,7 +134,7 @@ const Header = () => {
 
             {/* CTA Button */}
             <Button className="hidden md:flex bg-makelife-teal hover:bg-makelife-teal-dark">
-              Loja Virtual
+              Loja Online
             </Button>
 
             {/* Mobile Menu Toggle */}
@@ -175,7 +175,7 @@ const Header = () => {
               <div>
                 <h3 className="font-semibold text-makelife-teal-dark mb-2 flex items-center">
                   <User className="w-4 h-4 mr-2" />
-                  Para Você
+                  Para Si
                 </h3>
                 <div className="space-y-2 ml-6">
                   {consumersMenuItems.map((item) => (
@@ -196,7 +196,7 @@ const Header = () => {
                   Sobre Nós
                 </Link>
                 <Link to="/contato" className="block text-makelife-teal-dark hover:text-makelife-teal font-medium">
-                  Contato
+                  Contacto
                 </Link>
               </div>
             </div>

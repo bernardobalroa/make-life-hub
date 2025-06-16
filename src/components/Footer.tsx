@@ -21,7 +21,7 @@ const Footer = () => {
             </div>
             <p className="text-sm text-gray-300 mb-4">
               A nº1 em cuidados proctológicos e higiene íntima da região anal. 
-              Inovação científica a serviço do seu bem-estar.
+              Inovação científica ao serviço do seu bem-estar.
             </p>
             <div className="flex space-x-3">
               <a href="#" className="text-gray-300 hover:text-makelife-teal transition-colors">
@@ -57,7 +57,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link to="/contato" className="text-gray-300 hover:text-makelife-teal transition-colors">
-                  Contato
+                  Contacto
                 </Link>
               </li>
             </ul>
@@ -74,7 +74,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link to="/loja" className="text-gray-300 hover:text-makelife-teal transition-colors">
-                  Loja Virtual
+                  Loja Online
                 </Link>
               </li>
               <li>
@@ -92,29 +92,29 @@ const Footer = () => {
 
           {/* Contact Column */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">Contato</h3>
+            <h3 className="text-lg font-semibold mb-4">Contacto</h3>
             <div className="space-y-3">
               <div className="flex items-start space-x-3">
                 <MapPin className="w-5 h-5 text-makelife-teal mt-0.5 flex-shrink-0" />
                 <div className="text-sm text-gray-300">
-                  <p>São Caetano do Sul - SP</p>
-                  <p>Brasil</p>
+                  <p>Lisboa, Portugal</p>
+                  <p>Europa</p>
                 </div>
               </div>
               <div className="flex items-center space-x-3">
                 <Phone className="w-5 h-5 text-makelife-teal flex-shrink-0" />
-                <span className="text-sm text-gray-300">+55 (11) 9999-9999</span>
+                <span className="text-sm text-gray-300">+351 21 000 0000</span>
               </div>
               <div className="flex items-center space-x-3">
                 <Mail className="w-5 h-5 text-makelife-teal flex-shrink-0" />
-                <span className="text-sm text-gray-300">contato@makelife.com.br</span>
+                <span className="text-sm text-gray-300">contacto@makelife.pt</span>
               </div>
             </div>
 
             <div className="mt-6 p-3 bg-makelife-teal/20 rounded-lg">
               <p className="text-sm text-gray-300">
                 <strong className="text-makelife-teal">Distribuição Europa</strong><br />
-                Entre em contato para consultas internacionais
+                Entre em contacto para consultas internacionais
               </p>
             </div>
           </div>
@@ -132,7 +132,7 @@ const Footer = () => {
               Política de Privacidade
             </Link>
             <Link to="/termos-uso" className="text-gray-300 hover:text-makelife-teal transition-colors">
-              Termos de Uso
+              Termos de Utilização
             </Link>
             <Link to="/cookies" className="text-gray-300 hover:text-makelife-teal transition-colors">
               Política de Cookies

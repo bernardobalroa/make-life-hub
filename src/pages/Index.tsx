@@ -16,7 +16,7 @@ const Index = () => {
     {
       id: 'hidraenema-pro',
       name: 'Hidraenema Pro',
-      description: 'Hidratante intranal com nanotecnologia de ácido hialurônico para proteção prolongada por 72h.',
+      description: 'Hidratante intranal com nanotecnologia de ácido hialurónico para protecção prolongada por 72h.',
       price: 45.90,
       category: 'professional' as const,
       features: ['Hidratação 72h', 'Nanotecnologia', 'Uso clínico'],
@@ -25,19 +25,19 @@ const Index = () => {
     {
       id: 'procto-wash',
       name: 'Procto Wash',
-      description: 'Sabonete íntimo específico para higiene da região anal, uso diário com pH balanceado.',
+      description: 'Sabonete íntimo específico para higiene da região anal, uso diário com pH equilibrado.',
       price: 18.50,
       category: 'consumer' as const,
-      features: ['pH balanceado', 'Uso diário', 'Suavidade'],
+      features: ['pH equilibrado', 'Uso diário', 'Suavidade'],
       inStock: true
     },
     {
       id: 'wipewash',
       name: 'WipeWash',
-      description: 'Toalhas umedecidas especiais para higiene pós-cirúrgica e cuidados cotidianos.',
+      description: 'Toalhitas húmidas especiais para higiene pós-cirúrgica e cuidados quotidianos.',
       price: 12.90,
       category: 'consumer' as const,
-      features: ['Pós-cirúrgico', 'Portátil', 'Dermatologicamente testado'],
+      features: ['Pós-cirúrgico', 'Portátil', 'Testado dermatologicamente'],
       inStock: true
     }
   ];
@@ -46,7 +46,7 @@ const Index = () => {
     {
       name: "Dr. Ricardo Santos",
       role: "Coloproctologista",
-      content: "Os produtos MakeLife revolucionaram nosso preparo pré-cirúrgico. A qualidade e eficácia são notáveis.",
+      content: "Os produtos MakeLife revolucionaram a nossa preparação pré-cirúrgica. A qualidade e eficácia são notáveis.",
       rating: 5
     },
     {
@@ -69,7 +69,7 @@ const Index = () => {
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-makelife-teal-dark mb-4">
-              Escolha sua Área de Interesse
+              Escolha a sua Área de Interesse
             </h2>
             <p className="text-makelife-gray-medium max-w-2xl mx-auto">
               Oferecemos soluções específicas tanto para profissionais de saúde quanto para consumidores finais
@@ -102,12 +102,12 @@ const Index = () => {
                   </li>
                   <li className="flex items-center text-makelife-gray-medium">
                     <ChevronRight className="w-4 h-4 text-makelife-teal mr-2" />
-                    Cotações e pedidos em volume
+                    Orçamentos e encomendas em volume
                   </li>
                 </ul>
                 <Link to="/produtos-profissionais" className="block">
                   <Button className="w-full bg-makelife-teal hover:bg-makelife-teal-dark group">
-                    Acessar Área Profissional
+                    Aceder à Área Profissional
                     <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
                   </Button>
                 </Link>
@@ -120,7 +120,7 @@ const Index = () => {
                 <div className="w-16 h-16 bg-makelife-teal/20 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-makelife-teal group-hover:text-white transition-colors">
                   <Heart className="w-8 h-8 text-makelife-teal group-hover:text-white" />
                 </div>
-                <CardTitle className="text-xl text-makelife-teal-dark">Para Você</CardTitle>
+                <CardTitle className="text-xl text-makelife-teal-dark">Para Si</CardTitle>
                 <CardDescription>Cuidados íntimos pessoais</CardDescription>
               </CardHeader>
               <CardContent className="space-y-4">
@@ -139,12 +139,12 @@ const Index = () => {
                   </li>
                   <li className="flex items-center text-makelife-gray-medium">
                     <ChevronRight className="w-4 h-4 text-makelife-teal mr-2" />
-                    Suporte especializado ao cliente
+                    Apoio especializado ao cliente
                   </li>
                 </ul>
                 <Link to="/loja" className="block">
                   <Button className="w-full bg-makelife-teal hover:bg-makelife-teal-dark group">
-                    Acessar Loja Virtual
+                    Aceder à Loja Online
                     <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
                   </Button>
                 </Link>
@@ -162,7 +162,7 @@ const Index = () => {
               Produtos em Destaque
             </h2>
             <p className="text-makelife-gray-medium max-w-2xl mx-auto">
-              Nossa linha completa de produtos inovadores para cuidados proctológicos e higiene íntima
+              A nossa linha completa de produtos inovadores para cuidados proctológicos e higiene íntima
             </p>
           </div>
 
@@ -194,12 +194,12 @@ const Index = () => {
               </div>
               
               <h2 className="text-3xl font-bold text-makelife-teal-dark mb-6">
-                Pesquisa e Desenvolvimento Próprio
+                Investigação e Desenvolvimento Próprio
               </h2>
               
               <p className="text-makelife-gray-medium mb-6">
                 Fundada em 2021 como braço do centro tecnológico Makelab, somos pioneiros em 
-                pesquisa científica dedicada aos cuidados da região anal. Nossa equipe de pesquisadores 
+                investigação científica dedicada aos cuidados da região anal. A nossa equipa de investigadores 
                 desenvolve produtos patenteados com tecnologia inovadora.
               </p>
 
@@ -216,7 +216,7 @@ const Index = () => {
 
               <Link to="/ciencia">
                 <Button className="bg-makelife-teal hover:bg-makelife-teal-dark">
-                  Conheça Nossa Ciência
+                  Conheça a Nossa Ciência
                   <ArrowRight className="w-4 h-4 ml-2" />
                 </Button>
               </Link>
@@ -226,8 +226,8 @@ const Index = () => {
               <div className="bg-gradient-makelife rounded-2xl p-8 text-white">
                 <h3 className="text-xl font-bold mb-4">Nanotecnologia Avançada</h3>
                 <p className="mb-6">
-                  Nosso produto Hidraenema Pro utiliza nanotecnologia de hialuronato de sódio, 
-                  proporcionando hidratação prolongada e proteção superior dos tecidos anais.
+                  O nosso produto Hidraenema Pro utiliza nanotecnologia de hialuronato de sódio, 
+                  proporcionando hidratação prolongada e protecção superior dos tecidos anais.
                 </p>
                 <div className="bg-white/20 rounded-lg p-4">
                   <div className="text-sm opacity-90">Comprovação científica:</div>
@@ -244,7 +244,7 @@ const Index = () => {
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-makelife-teal-dark mb-4">
-              O que dizem nossos clientes
+              O que dizem os nossos clientes
             </h2>
             <p className="text-makelife-gray-medium max-w-2xl mx-auto">
               Depoimentos de profissionais e pacientes que confiam na qualidade MakeLife
@@ -284,7 +284,7 @@ const Index = () => {
             Pronto para Cuidar da sua Saúde Íntima?
           </h2>
           <p className="text-xl opacity-90 mb-8 max-w-2xl mx-auto">
-            Descubra nossa linha completa de produtos inovadores e experimente a diferença MakeLife
+            Descubra a nossa linha completa de produtos inovadores e experimente a diferença MakeLife
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link to="/loja">
@@ -295,7 +295,7 @@ const Index = () => {
             </Link>
             <Link to="/contato">
               <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-makelife-teal">
-                Fale Conosco
+                Fale Connosco
               </Button>
             </Link>
           </div>

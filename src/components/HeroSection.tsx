@@ -32,7 +32,7 @@ const HeroSection = () => {
               
               <p className="text-xl text-makelife-gray-medium max-w-lg">
                 Pioneiros em saúde proctológica e higiene íntima da região anal. 
-                Inovação científica a serviço do seu bem-estar e conforto.
+                Inovação científica ao serviço do seu bem-estar e conforto.
               </p>
             </div>
 
@@ -88,7 +88,7 @@ const HeroSection = () => {
                   <div className="w-12 h-12 bg-makelife-teal/20 rounded-lg flex items-center justify-center mb-4">
                     <span className="text-makelife-teal font-bold">P+</span>
                   </div>
-                  <h3 className="font-semibold text-makelife-teal-dark">Proteção Clínica</h3>
+                  <h3 className="font-semibold text-makelife-teal-dark">Protecção Clínica</h3>
                   <p className="text-sm text-makelife-gray-medium">Uso hospitalar</p>
                 </div>
               </div>
@@ -99,7 +99,7 @@ const HeroSection = () => {
                     <span className="text-makelife-teal font-bold">C+</span>
                   </div>
                   <h3 className="font-semibold text-makelife-teal-dark">Conforto Diário</h3>
-                  <p className="text-sm text-makelife-gray-medium">Uso cotidiano</p>
+                  <p className="text-sm text-makelife-gray-medium">Uso quotidiano</p>
                 </div>
                 
                 <div className="bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition-shadow">
@@ -107,7 +107,7 @@ const HeroSection = () => {
                     <span className="text-makelife-teal font-bold">I+</span>
                   </div>
                   <h3 className="font-semibold text-makelife-teal-dark">Inovação</h3>
-                  <p className="text-sm text-makelife-gray-medium">Pesquisa científica</p>
+                  <p className="text-sm text-makelife-gray-medium">Investigação científica</p>
                 </div>
               </div>
             </div>
@@ -129,7 +129,7 @@ const HeroSection = () => {
           </div>
           <div className="text-center">
             <div className="text-3xl font-bold text-makelife-teal">100%</div>
-            <div className="text-sm text-makelife-gray-medium">P&D Próprio</div>
+            <div className="text-sm text-makelife-gray-medium">I&D Próprio</div>
           </div>
           <div className="text-center">
             <div className="text-3xl font-bold text-makelife-teal">Europa</div>

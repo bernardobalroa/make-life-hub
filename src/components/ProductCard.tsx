@@ -98,7 +98,7 @@ const ProductCard: React.FC<ProductCardProps> = ({
             disabled={!inStock}
           >
             <ShoppingCart className="w-4 h-4 mr-2" />
-            {inStock ? 'Adicionar ao Carrinho' : 'Fora de Estoque'}
+            {inStock ? 'Adicionar ao Carrinho' : 'Fora de Stock'}
           </Button>
         ) : (
           <Button 
@@ -107,7 +107,7 @@ const ProductCard: React.FC<ProductCardProps> = ({
             onClick={handleViewDetails}
           >
             <Info className="w-4 h-4 mr-2" />
-            Solicitar Cotação
+            Solicitar Orçamento
           </Button>
         )}
         
