@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
-import { ShoppingCart, Menu, X, ChevronDown, Users, User } from 'lucide-react';
+import { ShoppingCart, Menu, X, ChevronDown, Users, User, LogIn } from 'lucide-react';
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -14,20 +14,18 @@ import {
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  const professionalsMenuItems = [
-    { title: 'Quem Somos', href: '/institucional', description: 'A nossa história e missão' },
-    { title: 'Produtos Profissionais', href: '/produtos-profissionais', description: 'Catálogo para clínicas e hospitais' },
-    { title: 'Ciência e Inovação', href: '/ciencia', description: 'Laboratório e investigação' },
-    { title: 'Distribuição', href: '/distribuicao', description: 'Representantes por região' },
-    { title: 'Conteúdo Técnico', href: '/blog-tecnico', description: 'Artigos científicos' }
+  const particularsMenuItems = [
+    { title: 'Loja Online', href: '/loja', description: 'Compre online com segurança' },
+    { title: 'Onde Comprar', href: '/parcerias', description: 'Parcerias e pontos de venda' },
+    { title: 'Contactos', href: '/contato', description: 'Apoio ao cliente' }
   ];
 
-  const consumersMenuItems = [
-    { title: 'Loja Online', href: '/loja', description: 'Compre online com segurança' },
-    { title: 'Os Nossos Produtos', href: '/produtos', description: 'Linha completa para si' },
-    { title: 'Blog de Saúde', href: '/blog', description: 'Dicas e orientações' },
-    { title: 'Parcerias', href: '/parcerias', description: 'Seja nosso parceiro' },
-    { title: 'Apoio ao Cliente', href: '/suporte', description: 'Atendimento ao cliente' }
+  const professionalsMenuItems = [
+    { title: 'Quem Somos', href: '/institucional', description: 'A nossa história e missão' },
+    { title: 'Ciência e Investigação', href: '/ciencia', description: 'Laboratório e investigação' },
+    { title: 'Produtos - Brochura', href: '/produtos-profissionais', description: 'Catálogo para download' },
+    { title: 'Distribuição', href: '/distribuicao', description: 'Representantes por região' },
+    { title: 'Contactos', href: '/contato', description: 'Formulário profissional' }
   ];
 
   return (
@@ -48,20 +46,20 @@ const Header = () => {
           {/* Desktop Navigation */}
           <NavigationMenu className="hidden lg:flex">
             <NavigationMenuList className="space-x-6">
-              {/* Profissionais Dropdown */}
+              {/* Particulares Dropdown - Primeira posição */}
               <NavigationMenuItem>
-                <NavigationMenuTrigger className="flex items-center text-makelife-teal-dark hover:text-makelife-teal">
-                  <Users className="w-4 h-4 mr-2" />
-                  Para Profissionais
+                <NavigationMenuTrigger className="flex items-center text-makelife-teal-dark hover:text-makelife-teal font-medium">
+                  <User className="w-4 h-4 mr-2" />
+                  Particulares
                 </NavigationMenuTrigger>
                 <NavigationMenuContent>
                   <div className="grid gap-3 p-6 w-[500px] bg-makelife-gray-light">
                     <div className="row-span-3">
                       <div className="mb-4">
-                        <h4 className="text-lg font-medium text-makelife-teal-dark">Área Profissional</h4>
-                        <p className="text-sm text-makelife-gray-medium">Soluções para clínicas e hospitais</p>
+                        <h4 className="text-lg font-medium text-makelife-teal-dark">Saúde Proctológica e Higiene da Região Retal e Anal</h4>
+                        <p className="text-sm text-makelife-gray-medium">Cuidados íntimos para o seu bem-estar</p>
                       </div>
-                      {professionalsMenuItems.map((item) => (
+                      {particularsMenuItems.map((item) => (
                         <Link
                           key={item.href}
                           to={item.href}
@@ -78,20 +76,20 @@ const Header = () => {
                 </NavigationMenuContent>
               </NavigationMenuItem>
 
-              {/* Consumidores Dropdown */}
+              {/* Profissionais Dropdown - Segunda posição */}
               <NavigationMenuItem>
                 <NavigationMenuTrigger className="flex items-center text-makelife-teal-dark hover:text-makelife-teal">
-                  <User className="w-4 h-4 mr-2" />
-                  Para Si
+                  <Users className="w-4 h-4 mr-2" />
+                  Profissionais de Saúde
                 </NavigationMenuTrigger>
                 <NavigationMenuContent>
                   <div className="grid gap-3 p-6 w-[500px] bg-makelife-gray-light">
                     <div className="row-span-3">
                       <div className="mb-4">
-                        <h4 className="text-lg font-medium text-makelife-teal-dark">Área do Consumidor</h4>
-                        <p className="text-sm text-makelife-gray-medium">Cuidados íntimos para o seu bem-estar</p>
+                        <h4 className="text-lg font-medium text-makelife-teal-dark">Hospitais, Clínicas, Farmácias e Distribuidores</h4>
+                        <p className="text-sm text-makelife-gray-medium">Soluções para profissionais de saúde</p>
                       </div>
-                      {consumersMenuItems.map((item) => (
+                      {professionalsMenuItems.map((item) => (
                         <Link
                           key={item.href}
                           to={item.href}
@@ -114,16 +112,17 @@ const Header = () => {
                   Sobre Nós
                 </Link>
               </NavigationMenuItem>
-              <NavigationMenuItem>
-                <Link to="/contato" className="text-makelife-teal-dark hover:text-makelife-teal font-medium">
-                  Contacto
-                </Link>
-              </NavigationMenuItem>
             </NavigationMenuList>
           </NavigationMenu>
 
           {/* Right Actions */}
           <div className="flex items-center space-x-4">
+            {/* Login Button - Destaque principal */}
+            <Button variant="outline" size="sm" className="border-makelife-teal text-makelife-teal hover:bg-makelife-teal hover:text-white">
+              <LogIn className="w-4 h-4 mr-2" />
+              Entrar
+            </Button>
+
             {/* Shopping Cart */}
             <Button variant="outline" size="sm" className="relative">
               <ShoppingCart className="w-4 h-4" />
@@ -132,7 +131,7 @@ const Header = () => {
               </span>
             </Button>
 
-            {/* CTA Button */}
+            {/* CTA Button - Loja Online em destaque */}
             <Button className="hidden md:flex bg-makelife-teal hover:bg-makelife-teal-dark">
               Loja Online
             </Button>
@@ -155,11 +154,11 @@ const Header = () => {
             <div className="space-y-4">
               <div>
                 <h3 className="font-semibold text-makelife-teal-dark mb-2 flex items-center">
-                  <Users className="w-4 h-4 mr-2" />
-                  Para Profissionais
+                  <User className="w-4 h-4 mr-2" />
+                  Particulares
                 </h3>
                 <div className="space-y-2 ml-6">
-                  {professionalsMenuItems.map((item) => (
+                  {particularsMenuItems.map((item) => (
                     <Link
                       key={item.href}
                       to={item.href}
@@ -174,11 +173,11 @@ const Header = () => {
 
               <div>
                 <h3 className="font-semibold text-makelife-teal-dark mb-2 flex items-center">
-                  <User className="w-4 h-4 mr-2" />
-                  Para Si
+                  <Users className="w-4 h-4 mr-2" />
+                  Profissionais de Saúde
                 </h3>
                 <div className="space-y-2 ml-6">
-                  {consumersMenuItems.map((item) => (
+                  {professionalsMenuItems.map((item) => (
                     <Link
                       key={item.href}
                       to={item.href}
@@ -195,9 +194,10 @@ const Header = () => {
                 <Link to="/sobre" className="block text-makelife-teal-dark hover:text-makelife-teal font-medium">
                   Sobre Nós
                 </Link>
-                <Link to="/contato" className="block text-makelife-teal-dark hover:text-makelife-teal font-medium">
-                  Contacto
-                </Link>
+                <Button variant="outline" size="sm" className="w-full border-makelife-teal text-makelife-teal">
+                  <LogIn className="w-4 h-4 mr-2" />
+                  Entrar
+                </Button>
               </div>
             </div>
           </div>

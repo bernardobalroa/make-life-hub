@@ -20,7 +20,7 @@ const Footer = () => {
               </div>
             </div>
             <p className="text-sm text-gray-300 mb-4">
-              A nº1 em cuidados proctológicos e higiene íntima da região anal. 
+              A 1ª marca em saúde proctológica e na higiene e cuidados da região anal. 
               Inovação científica ao serviço do seu bem-estar.
             </p>
             <div className="flex space-x-3">
@@ -36,45 +36,18 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* Company Column */}
+          {/* Particulares Column */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">Empresa</h3>
+            <h3 className="text-lg font-semibold mb-4">Particulares</h3>
             <ul className="space-y-2">
-              <li>
-                <Link to="/institucional" className="text-gray-300 hover:text-makelife-teal transition-colors">
-                  Quem Somos
-                </Link>
-              </li>
-              <li>
-                <Link to="/ciencia" className="text-gray-300 hover:text-makelife-teal transition-colors">
-                  Ciência e Inovação
-                </Link>
-              </li>
-              <li>
-                <Link to="/distribuicao" className="text-gray-300 hover:text-makelife-teal transition-colors">
-                  Representantes
-                </Link>
-              </li>
-              <li>
-                <Link to="/contato" className="text-gray-300 hover:text-makelife-teal transition-colors">
-                  Contacto
-                </Link>
-              </li>
-            </ul>
-          </div>
-
-          {/* Products Column */}
-          <div>
-            <h3 className="text-lg font-semibold mb-4">Produtos</h3>
-            <ul className="space-y-2">
-              <li>
-                <Link to="/produtos-profissionais" className="text-gray-300 hover:text-makelife-teal transition-colors">
-                  Linha Profissional
-                </Link>
-              </li>
               <li>
                 <Link to="/loja" className="text-gray-300 hover:text-makelife-teal transition-colors">
                   Loja Online
+                </Link>
+              </li>
+              <li>
+                <Link to="/parcerias" className="text-gray-300 hover:text-makelife-teal transition-colors">
+                  Onde Comprar
                 </Link>
               </li>
               <li>
@@ -83,8 +56,35 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
-                <Link to="/parcerias" className="text-gray-300 hover:text-makelife-teal transition-colors">
-                  Parcerias
+                <Link to="/contato" className="text-gray-300 hover:text-makelife-teal transition-colors">
+                  Contactos
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          {/* Profissionais Column */}
+          <div>
+            <h3 className="text-lg font-semibold mb-4">Profissionais</h3>
+            <ul className="space-y-2">
+              <li>
+                <Link to="/institucional" className="text-gray-300 hover:text-makelife-teal transition-colors">
+                  Quem Somos
+                </Link>
+              </li>
+              <li>
+                <Link to="/ciencia" className="text-gray-300 hover:text-makelife-teal transition-colors">
+                  Ciência e Investigação
+                </Link>
+              </li>
+              <li>
+                <Link to="/produtos-profissionais" className="text-gray-300 hover:text-makelife-teal transition-colors">
+                  Produtos - Brochura
+                </Link>
+              </li>
+              <li>
+                <Link to="/distribuicao" className="text-gray-300 hover:text-makelife-teal transition-colors">
+                  Distribuição
                 </Link>
               </li>
             </ul>
@@ -97,8 +97,8 @@ const Footer = () => {
               <div className="flex items-start space-x-3">
                 <MapPin className="w-5 h-5 text-makelife-teal mt-0.5 flex-shrink-0" />
                 <div className="text-sm text-gray-300">
-                  <p>Lisboa, Portugal</p>
-                  <p>Europa</p>
+                  <p><strong>Sede:</strong> Portugal (Lisboa)</p>
+                  <p><strong>Distribuição:</strong> Europa e Reino Unido</p>
                 </div>
               </div>
               <div className="flex items-center space-x-3">
@@ -113,8 +113,10 @@ const Footer = () => {
 
             <div className="mt-6 p-3 bg-makelife-teal/20 rounded-lg">
               <p className="text-sm text-gray-300">
-                <strong className="text-makelife-teal">Distribuição Europa</strong><br />
-                Entre em contacto para consultas internacionais
+                <strong className="text-makelife-teal">Informações da Empresa</strong><br />
+                2021 – Fundação<br />
+                5+ Produtos Patenteados<br />
+                100% I&D Próprio
               </p>
             </div>
           </div>

@@ -7,21 +7,12 @@ import HeroSection from '@/components/HeroSection';
 import ProductCard from '@/components/ProductCard';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { ArrowRight, Microscope, Users, Heart, ChevronRight, Star, Quote } from 'lucide-react';
+import { ArrowRight, Microscope, ChevronRight, Star, Quote, Award, ShoppingCart, Download } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const Index = () => {
-  // Sample products data
+  // Sample products data - com foco em particulares
   const featuredProducts = [
-    {
-      id: 'hidraenema-pro',
-      name: 'Hidraenema Pro',
-      description: 'Hidratante intranal com nanotecnologia de ácido hialurónico para protecção prolongada por 72h.',
-      price: 45.90,
-      category: 'professional' as const,
-      features: ['Hidratação 72h', 'Nanotecnologia', 'Uso clínico'],
-      inStock: true
-    },
     {
       id: 'procto-wash',
       name: 'Procto Wash',
@@ -39,6 +30,15 @@ const Index = () => {
       category: 'consumer' as const,
       features: ['Pós-cirúrgico', 'Portátil', 'Testado dermatologicamente'],
       inStock: true
+    },
+    {
+      id: 'hidraenema-pro',
+      name: 'Hidraenema Pro',
+      description: 'Hidratante intranal com nanotecnologia de ácido hialurónico para protecção prolongada por 72h.',
+      price: 45.90,
+      category: 'professional' as const,
+      features: ['Hidratação 72h', 'Nanotecnologia', 'Uso clínico'],
+      inStock: true
     }
   ];
 
@@ -54,6 +54,12 @@ const Index = () => {
       role: "Cliente",
       content: "Finalmente encontrei produtos que realmente cuidam da minha higiene íntima com qualidade e discrição.",
       rating: 5
+    },
+    {
+      name: "Dr. Maria Silva",
+      role: "Proctologista",
+      content: "A linha MakeLife oferece soluções inovadoras que melhoram significativamente o conforto dos pacientes.",
+      rating: 5
     }
   ];
 
@@ -61,101 +67,87 @@ const Index = () => {
     <div className="min-h-screen bg-white">
       <Header />
       
-      {/* Hero Section */}
+      {/* Hero Section com nova estrutura */}
       <HeroSection />
 
-      {/* Segmentation Section */}
-      <section className="py-16 bg-white">
+      {/* Seção de Promoções/Campanhas para Particulares */}
+      <section className="py-16 bg-makelife-teal/5">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-makelife-teal-dark mb-4">
-              Escolha a sua Área de Interesse
+              Promoções em Destaque
             </h2>
             <p className="text-makelife-gray-medium max-w-2xl mx-auto">
-              Oferecemos soluções específicas tanto para profissionais de saúde quanto para consumidores finais
+              Aproveite as nossas ofertas especiais e cuide da sua saúde íntima com desconto
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-            {/* B2B Card */}
-            <Card className="group hover:shadow-lg transition-all duration-300 border-2 hover:border-makelife-teal">
-              <CardHeader className="text-center pb-4">
-                <div className="w-16 h-16 bg-makelife-teal/20 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-makelife-teal group-hover:text-white transition-colors">
-                  <Users className="w-8 h-8 text-makelife-teal group-hover:text-white" />
+          <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+            <Card className="border-2 border-makelife-teal bg-white">
+              <CardHeader className="text-center">
+                <div className="w-16 h-16 bg-makelife-teal rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Award className="w-8 h-8 text-white" />
                 </div>
-                <CardTitle className="text-xl text-makelife-teal-dark">Profissionais de Saúde</CardTitle>
-                <CardDescription>Clínicas, hospitais e distribuidores</CardDescription>
+                <CardTitle className="text-makelife-teal-dark">Kit Inicial</CardTitle>
+                <CardDescription>Para quem está a começar</CardDescription>
               </CardHeader>
-              <CardContent className="space-y-4">
-                <ul className="space-y-2 text-sm">
-                  <li className="flex items-center text-makelife-gray-medium">
-                    <ChevronRight className="w-4 h-4 text-makelife-teal mr-2" />
-                    Produtos para uso clínico e hospitalar
-                  </li>
-                  <li className="flex items-center text-makelife-gray-medium">
-                    <ChevronRight className="w-4 h-4 text-makelife-teal mr-2" />
-                    Informações técnicas e científicas
-                  </li>
-                  <li className="flex items-center text-makelife-gray-medium">
-                    <ChevronRight className="w-4 h-4 text-makelife-teal mr-2" />
-                    Representantes comerciais por região
-                  </li>
-                  <li className="flex items-center text-makelife-gray-medium">
-                    <ChevronRight className="w-4 h-4 text-makelife-teal mr-2" />
-                    Orçamentos e encomendas em volume
-                  </li>
-                </ul>
-                <Link to="/produtos-profissionais" className="block">
-                  <Button className="w-full bg-makelife-teal hover:bg-makelife-teal-dark group">
-                    Aceder à Área Profissional
-                    <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
-                  </Button>
-                </Link>
+              <CardContent className="text-center">
+                <div className="text-2xl font-bold text-makelife-teal mb-2">15% DESC</div>
+                <p className="text-sm text-makelife-gray-medium mb-4">
+                  Procto Wash + WipeWash
+                </p>
+                <Button className="w-full bg-makelife-teal hover:bg-makelife-teal-dark">
+                  <ShoppingCart className="w-4 h-4 mr-2" />
+                  Comprar Kit
+                </Button>
               </CardContent>
             </Card>
 
-            {/* B2C Card */}
-            <Card className="group hover:shadow-lg transition-all duration-300 border-2 hover:border-makelife-teal">
-              <CardHeader className="text-center pb-4">
-                <div className="w-16 h-16 bg-makelife-teal/20 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-makelife-teal group-hover:text-white transition-colors">
-                  <Heart className="w-8 h-8 text-makelife-teal group-hover:text-white" />
+            <Card className="border-2 border-makelife-teal bg-white">
+              <CardHeader className="text-center">
+                <div className="w-16 h-16 bg-makelife-teal rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Star className="w-8 h-8 text-white" />
                 </div>
-                <CardTitle className="text-xl text-makelife-teal-dark">Para Si</CardTitle>
-                <CardDescription>Cuidados íntimos pessoais</CardDescription>
+                <CardTitle className="text-makelife-teal-dark">Produto do Mês</CardTitle>
+                <CardDescription>Mais vendido</CardDescription>
               </CardHeader>
-              <CardContent className="space-y-4">
-                <ul className="space-y-2 text-sm">
-                  <li className="flex items-center text-makelife-gray-medium">
-                    <ChevronRight className="w-4 h-4 text-makelife-teal mr-2" />
-                    Produtos para uso diário e bem-estar
-                  </li>
-                  <li className="flex items-center text-makelife-gray-medium">
-                    <ChevronRight className="w-4 h-4 text-makelife-teal mr-2" />
-                    Compra online segura e discreta
-                  </li>
-                  <li className="flex items-center text-makelife-gray-medium">
-                    <ChevronRight className="w-4 h-4 text-makelife-teal mr-2" />
-                    Dicas e orientações de saúde íntima
-                  </li>
-                  <li className="flex items-center text-makelife-gray-medium">
-                    <ChevronRight className="w-4 h-4 text-makelife-teal mr-2" />
-                    Apoio especializado ao cliente
-                  </li>
-                </ul>
-                <Link to="/loja" className="block">
-                  <Button className="w-full bg-makelife-teal hover:bg-makelife-teal-dark group">
-                    Aceder à Loja Online
-                    <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
-                  </Button>
-                </Link>
+              <CardContent className="text-center">
+                <div className="text-2xl font-bold text-makelife-teal mb-2">Procto Wash</div>
+                <p className="text-sm text-makelife-gray-medium mb-4">
+                  Higiene diária essencial
+                </p>
+                <Button className="w-full bg-makelife-teal hover:bg-makelife-teal-dark">
+                  <ShoppingCart className="w-4 h-4 mr-2" />
+                  Ver Produto
+                </Button>
+              </CardContent>
+            </Card>
+
+            <Card className="border-2 border-makelife-teal bg-white">
+              <CardHeader className="text-center">
+                <div className="w-16 h-16 bg-makelife-teal rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Download className="w-8 h-8 text-white" />
+                </div>
+                <CardTitle className="text-makelife-teal-dark">Guia Gratuito</CardTitle>
+                <CardDescription>Para profissionais</CardDescription>
+              </CardHeader>
+              <CardContent className="text-center">
+                <div className="text-2xl font-bold text-makelife-teal mb-2">Brochura</div>
+                <p className="text-sm text-makelife-gray-medium mb-4">
+                  Catálogo técnico completo
+                </p>
+                <Button variant="outline" className="w-full border-makelife-teal text-makelife-teal hover:bg-makelife-teal hover:text-white">
+                  <Download className="w-4 h-4 mr-2" />
+                  Download
+                </Button>
               </CardContent>
             </Card>
           </div>
         </div>
       </section>
 
-      {/* Featured Products */}
-      <section className="py-16 bg-makelife-gray-light">
+      {/* Featured Products - Com foco em particulares (70%) */}
+      <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-makelife-teal-dark mb-4">
@@ -172,19 +164,26 @@ const Index = () => {
             ))}
           </div>
 
-          <div className="text-center mt-8">
-            <Link to="/produtos">
-              <Button variant="outline" size="lg" className="border-makelife-teal text-makelife-teal hover:bg-makelife-teal hover:text-white">
-                Ver Todos os Produtos
+          <div className="text-center mt-8 space-y-4">
+            <Link to="/loja">
+              <Button size="lg" className="bg-makelife-teal hover:bg-makelife-teal-dark mr-4">
+                <ShoppingCart className="w-4 h-4 mr-2" />
+                Ver Todos na Loja
                 <ArrowRight className="w-4 h-4 ml-2" />
+              </Button>
+            </Link>
+            <Link to="/produtos-profissionais">
+              <Button variant="outline" size="lg" className="border-makelife-teal text-makelife-teal hover:bg-makelife-teal hover:text-white">
+                <Download className="w-4 h-4 mr-2" />
+                Catálogo Profissional
               </Button>
             </Link>
           </div>
         </div>
       </section>
 
-      {/* Science & Innovation */}
-      <section className="py-16 bg-white">
+      {/* Ciência e Inovação - Actualizada */}
+      <section className="py-16 bg-makelife-gray-light">
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
@@ -200,15 +199,24 @@ const Index = () => {
               <p className="text-makelife-gray-medium mb-6">
                 Fundada em 2021 como braço do centro tecnológico Makelab, somos pioneiros em 
                 investigação científica dedicada aos cuidados da região anal. A nossa equipa de investigadores 
-                desenvolve produtos patenteados com tecnologia inovadora.
+                desenvolve produtos patenteados com tecnologia inovadora, estabelecendo-nos como 
+                a 1ª marca em saúde proctológica na Europa.
               </p>
 
               <div className="grid grid-cols-2 gap-4 mb-6">
-                <div className="p-4 bg-makelife-gray-light rounded-lg">
+                <div className="p-4 bg-white rounded-lg shadow-sm">
+                  <div className="text-2xl font-bold text-makelife-teal mb-1">2021</div>
+                  <div className="text-sm text-makelife-gray-medium">Fundação</div>
+                </div>
+                <div className="p-4 bg-white rounded-lg shadow-sm">
                   <div className="text-2xl font-bold text-makelife-teal mb-1">5+</div>
                   <div className="text-sm text-makelife-gray-medium">Patentes Requeridas</div>
                 </div>
-                <div className="p-4 bg-makelife-gray-light rounded-lg">
+                <div className="p-4 bg-white rounded-lg shadow-sm">
+                  <div className="text-2xl font-bold text-makelife-teal mb-1">100%</div>
+                  <div className="text-sm text-makelife-gray-medium">I&D Próprio</div>
+                </div>
+                <div className="p-4 bg-white rounded-lg shadow-sm">
                   <div className="text-2xl font-bold text-makelife-teal mb-1">72h</div>
                   <div className="text-sm text-makelife-gray-medium">Hidratação Prolongada</div>
                 </div>
@@ -227,7 +235,8 @@ const Index = () => {
                 <h3 className="text-xl font-bold mb-4">Nanotecnologia Avançada</h3>
                 <p className="mb-6">
                   O nosso produto Hidraenema Pro utiliza nanotecnologia de hialuronato de sódio, 
-                  proporcionando hidratação prolongada e protecção superior dos tecidos anais.
+                  proporcionando hidratação prolongada e protecção superior dos tecidos anais, 
+                  revolucionando os cuidados proctológicos.
                 </p>
                 <div className="bg-white/20 rounded-lg p-4">
                   <div className="text-sm opacity-90">Comprovação científica:</div>
@@ -239,19 +248,19 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Testimonials */}
-      <section className="py-16 bg-makelife-gray-light">
+      {/* Testemunhos - Título actualizado */}
+      <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-makelife-teal-dark mb-4">
-              O que dizem os nossos clientes
+              O Que Dizem os Nossos Clientes Sobre a Qualidade dos Produtos MakeLife
             </h2>
             <p className="text-makelife-gray-medium max-w-2xl mx-auto">
               Depoimentos de profissionais e pacientes que confiam na qualidade MakeLife
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {testimonials.map((testimonial, index) => (
               <Card key={index} className="relative">
                 <CardHeader className="pb-4">
@@ -277,11 +286,11 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Call to Action */}
+      {/* Call to Action - Focado em Particulares */}
       <section className="py-16 bg-gradient-makelife text-white">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold mb-4">
-            Pronto para Cuidar da sua Saúde Íntima?
+            Pronto para Cuidar da Sua Saúde Íntima?
           </h2>
           <p className="text-xl opacity-90 mb-8 max-w-2xl mx-auto">
             Descubra a nossa linha completa de produtos inovadores e experimente a diferença MakeLife
@@ -289,7 +298,8 @@ const Index = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link to="/loja">
               <Button size="lg" variant="secondary" className="bg-white text-makelife-teal hover:bg-gray-100">
-                Comprar Agora
+                <ShoppingCart className="w-5 h-5 mr-2" />
+                Comprar na Loja Online
                 <ArrowRight className="w-4 h-4 ml-2" />
               </Button>
             </Link>
