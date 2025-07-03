@@ -182,7 +182,7 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Ciência e Inovação - Actualizada */}
+      {/* Ciência e Inovação */}
       <section className="py-16 bg-makelife-gray-light">
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -248,15 +248,18 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Testemunhos - Título actualizado */}
+      {/* Testemunhos */}
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-makelife-teal-dark mb-4">
-              O Que Dizem os Nossos Clientes Sobre a Qualidade dos Produtos MakeLife
+              Testemunhos
             </h2>
+            <h3 className="text-xl text-makelife-gray-medium mb-4">
+              O Que Dizem os Nossos Clientes Sobre a Qualidade dos Produtos MakeLife
+            </h3>
             <p className="text-makelife-gray-medium max-w-2xl mx-auto">
-              Depoimentos de profissionais e pacientes que confiam na qualidade MakeLife
+              Depoimentos reais de profissionais e pacientes
             </p>
           </div>
 

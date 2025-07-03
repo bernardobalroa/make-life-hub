@@ -116,7 +116,8 @@ const Footer = () => {
                 <strong className="text-makelife-teal">Informações da Empresa</strong><br />
                 2021 – Fundação<br />
                 5+ Produtos Patenteados<br />
-                100% I&D Próprio
+                100% I&D Próprio<br />
+                Europa e Reino Unido – Distribuição
               </p>
             </div>
           </div>

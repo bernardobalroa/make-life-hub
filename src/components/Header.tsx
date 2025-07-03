@@ -56,7 +56,7 @@ const Header = () => {
                   <div className="grid gap-3 p-6 w-[500px] bg-makelife-gray-light">
                     <div className="row-span-3">
                       <div className="mb-4">
-                        <h4 className="text-lg font-medium text-makelife-teal-dark">Saúde Proctológica e Higiene da Região Retal e Anal</h4>
+                        <h4 className="text-lg font-medium text-makelife-teal-dark">Tratamento e higiene do reto e do ânus</h4>
                         <p className="text-sm text-makelife-gray-medium">Cuidados íntimos para o seu bem-estar</p>
                       </div>
                       {particularsMenuItems.map((item) => (
@@ -117,10 +117,9 @@ const Header = () => {
 
           {/* Right Actions */}
           <div className="flex items-center space-x-4">
-            {/* Login Button - Destaque principal */}
-            <Button variant="outline" size="sm" className="border-makelife-teal text-makelife-teal hover:bg-makelife-teal hover:text-white">
-              <LogIn className="w-4 h-4 mr-2" />
-              Entrar
+            {/* CTA Button - Loja Online em destaque */}
+            <Button className="hidden md:flex bg-makelife-teal hover:bg-makelife-teal-dark">
+              Loja Online
             </Button>
 
             {/* Shopping Cart */}
@@ -131,9 +130,10 @@ const Header = () => {
               </span>
             </Button>
 
-            {/* CTA Button - Loja Online em destaque */}
-            <Button className="hidden md:flex bg-makelife-teal hover:bg-makelife-teal-dark">
-              Loja Online
+            {/* Login Button - Destaque principal */}
+            <Button size="sm" className="bg-makelife-teal hover:bg-makelife-teal-dark text-white font-medium">
+              <LogIn className="w-4 h-4 mr-2" />
+              Entrar
             </Button>
 
             {/* Mobile Menu Toggle */}
