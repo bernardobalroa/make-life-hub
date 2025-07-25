@@ -34,13 +34,11 @@ const Header = () => {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-2">
-            <div className="w-10 h-10 bg-gradient-makelife rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-lg">ML</span>
-            </div>
-            <div className="flex flex-col">
-              <span className="text-xl font-bold text-makelife-teal-dark">Make</span>
-              <span className="text-xl font-bold text-makelife-teal">Life</span>
-            </div>
+            <img 
+              src="/lovable-uploads/d1d38c72-87c0-4fb7-a12e-62ecd56c50b8.png" 
+              alt="MakeLife Logo" 
+              className="h-12 w-auto"
+            />
           </Link>
 
           {/* Desktop Navigation */}

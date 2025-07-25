@@ -63,12 +63,14 @@ export default {
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
 				},
-				// MakeLife brand colors
+				// MakeLife brand colors (baseadas no logo oficial)
 				makelife: {
-					teal: '#009688',
-					'teal-dark': '#00695c',
-					'teal-light': '#4db6ac',
+					teal: '#4db0a6', // Cor principal do logo
+					'teal-dark': '#00796b',
+					'teal-light': '#80cbc4',
 					'teal-lighter': '#b2dfdb',
+					beige: '#d7ccc8', // Cor secundária do logo MAKE
+					'beige-dark': '#bcaaa4',
 					'gray-light': '#f8f9fa',
 					'gray-medium': '#6c757d'
 				}
