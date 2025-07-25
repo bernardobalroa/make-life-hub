@@ -37,7 +37,7 @@ const Header = () => {
             <img 
               src="/lovable-uploads/d1d38c72-87c0-4fb7-a12e-62ecd56c50b8.png" 
               alt="MakeLife Logo" 
-              className="h-16 w-auto"
+              className="h-20 w-auto bg-white rounded px-2 py-1"
             />
           </Link>
 

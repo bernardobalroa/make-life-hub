@@ -11,13 +11,11 @@ const Footer = () => {
           {/* Brand Column */}
           <div>
             <div className="flex items-center space-x-2 mb-4">
-              <div className="w-10 h-10 bg-makelife-teal rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-lg">ML</span>
-              </div>
-              <div className="flex flex-col">
-                <span className="text-xl font-bold text-makelife-teal">Make</span>
-                <span className="text-xl font-bold text-white">Life</span>
-              </div>
+              <img 
+                src="/lovable-uploads/d1d38c72-87c0-4fb7-a12e-62ecd56c50b8.png" 
+                alt="MakeLife Logo" 
+                className="h-12 w-auto bg-white rounded px-2 py-1"
+              />
             </div>
             <p className="text-sm text-gray-300 mb-4">
               A 1ª marca em saúde proctológica e na higiene e cuidados da região anal. 
@@ -128,7 +126,7 @@ const Footer = () => {
         {/* Bottom Section */}
         <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
           <div className="text-sm text-gray-300">
-            © 2024 MakeLife. Todos os direitos reservados.
+            © 2025 MakeLife. Todos os direitos reservados.
           </div>
           <div className="flex space-x-6 text-sm">
             <Link to="/politica-privacidade" className="text-gray-300 hover:text-makelife-teal transition-colors">
