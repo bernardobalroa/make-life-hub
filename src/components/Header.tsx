@@ -35,7 +35,7 @@ const Header = () => {
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-2">
             <img 
-              src="/lovable-uploads/d1d38c72-87c0-4fb7-a12e-62ecd56c50b8.png" 
+              src="/lovable-uploads/bae60b53-40c6-448c-948e-c9fc0727e1e4.png" 
               alt="MakeLife Logo" 
               className="h-20 w-auto bg-white rounded px-2 py-1"
             />
