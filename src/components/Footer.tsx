@@ -112,10 +112,10 @@ const Footer = () => {
             <div className="mt-6 p-3 bg-makelife-teal/20 rounded-lg">
               <p className="text-sm text-gray-300">
                 <strong className="text-makelife-teal">Informações da Empresa</strong><br />
-                2021 – Fundação<br />
+                Fundação: 2021<br />
                 5+ Produtos Patenteados<br />
                 100% I&D Próprio<br />
-                Europa e Reino Unido – Distribuição
+                Distribuição: Europa e Reino Unido
               </p>
             </div>
           </div>

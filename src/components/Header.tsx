@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
-import { ShoppingCart, Menu, X, ChevronDown, Users, User, LogIn } from 'lucide-react';
+import { ShoppingCart, Menu, X, ChevronDown, Users, User, LogIn, Facebook, Instagram, Linkedin } from 'lucide-react';
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -115,10 +115,25 @@ const Header = () => {
 
           {/* Right Actions */}
           <div className="flex items-center space-x-4">
+            {/* Follow Us - Redes Sociais */}
+            <div className="hidden lg:flex items-center space-x-2">
+              <a href="#" className="text-makelife-teal-dark hover:text-makelife-teal transition-colors">
+                <Facebook className="w-4 h-4" />
+              </a>
+              <a href="#" className="text-makelife-teal-dark hover:text-makelife-teal transition-colors">
+                <Instagram className="w-4 h-4" />
+              </a>
+              <a href="#" className="text-makelife-teal-dark hover:text-makelife-teal transition-colors">
+                <Linkedin className="w-4 h-4" />
+              </a>
+            </div>
+
             {/* CTA Button - Loja Online em destaque */}
-            <Button className="hidden md:flex bg-makelife-teal hover:bg-makelife-teal-dark">
-              Loja Online
-            </Button>
+            <Link to="/loja">
+              <Button className="hidden md:flex bg-makelife-teal hover:bg-makelife-teal-dark">
+                Loja Online
+              </Button>
+            </Link>
 
             {/* Shopping Cart */}
             <Button variant="outline" size="sm" className="relative">

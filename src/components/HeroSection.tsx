@@ -15,25 +15,25 @@ const HeroSection = () => {
       <div className="container mx-auto px-4 relative z-10">
         {/* Main Hero Content */}
         <div className="text-center mb-16">
-          <div className="space-y-4">
-            <div className="flex items-center justify-center space-x-2 text-makelife-teal">
-              <Award className="w-5 h-5" />
-              <span className="text-sm font-medium">A 1ª marca em saúde Proctológica e na higiene e cuidados da região anal</span>
+            <div className="space-y-4">
+              <div className="flex items-center justify-center space-x-2 text-makelife-teal">
+                <Award className="w-5 h-5" />
+                <span className="text-sm font-medium">A 1ª marca em saúde proctológica e na higiene e cuidados da região anal</span>
+              </div>
+              
+              <h1 className="text-4xl lg:text-6xl font-bold leading-tight">
+                <span className="text-makelife-teal-dark">Cuidados</span>
+                <br />
+                <span className="text-gradient-makelife">Íntimos</span>
+                <br />
+                <span className="text-makelife-teal-dark">Inovadores</span>
+              </h1>
+              
+              <p className="text-xl text-makelife-gray-medium max-w-3xl mx-auto">
+                Pioneiros em saúde proctológica e higiene íntima da região anal. 
+                Inovação científica ao serviço do seu bem-estar e conforto.
+              </p>
             </div>
-            
-            <h1 className="text-4xl lg:text-6xl font-bold leading-tight">
-              <span className="text-makelife-teal-dark">Cuidados</span>
-              <br />
-              <span className="text-gradient-makelife">Íntimos</span>
-              <br />
-              <span className="text-makelife-teal-dark">Inovadores</span>
-            </h1>
-            
-            <p className="text-xl text-makelife-gray-medium max-w-3xl mx-auto">
-              Pioneiros em saúde proctológica e higiene íntima da região anal. 
-              Inovação científica ao serviço do seu bem-estar e conforto.
-            </p>
-          </div>
 
           {/* Trust Indicators */}
           <div className="flex items-center justify-center space-x-6 text-sm text-makelife-gray-medium mt-6">
@@ -62,8 +62,8 @@ const HeroSection = () => {
                   <div className="w-20 h-20 bg-makelife-teal/20 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-makelife-teal group-hover:text-white transition-colors">
                     <User className="w-10 h-10 text-makelife-teal" />
                   </div>
-                  <h3 className="text-2xl font-bold text-makelife-teal-dark mb-2">Particulares</h3>
-                  <p className="text-makelife-gray-medium">Tratamento e higiene do reto e do ânus</p>
+                   <h3 className="text-2xl font-bold text-makelife-teal-dark mb-2">Particulares</h3>
+                   <p className="text-makelife-gray-medium">Saúde proctológica e higiene da região retal e anal</p>
                 </div>
                 
                 <div className="space-y-4 mb-6">
@@ -104,8 +104,8 @@ const HeroSection = () => {
                   <div className="w-20 h-20 bg-makelife-teal/20 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-makelife-teal group-hover:text-white transition-colors">
                     <Users className="w-10 h-10 text-makelife-teal" />
                   </div>
-                  <h3 className="text-2xl font-bold text-makelife-teal-dark mb-2">Profissionais de Saúde</h3>
-                  <p className="text-makelife-gray-medium">Hospitais, Clínicas, Farmácias e Distribuidores</p>
+                   <h3 className="text-2xl font-bold text-makelife-teal-dark mb-2">Profissionais de Saúde</h3>
+                   <p className="text-makelife-gray-medium">Nº1 em cuidados proctológicos</p>
                 </div>
                 
                 <div className="space-y-4 mb-6">
