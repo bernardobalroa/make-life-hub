@@ -37,7 +37,7 @@ const ProductCard: React.FC<ProductCardProps> = ({
   return (
     <Card className="group hover:shadow-lg transition-all duration-300 hover-lift">
       <CardHeader className="pb-3">
-        <div className="aspect-square bg-makelife-gray-light rounded-lg mb-3 overflow-hidden">
+        <div className="aspect-square bg-muted rounded-lg mb-3 overflow-hidden">
           {image ? (
             <img 
               src={image} 
@@ -46,20 +46,19 @@ const ProductCard: React.FC<ProductCardProps> = ({
             />
           ) : (
             <div className="w-full h-full flex items-center justify-center">
-              <div className="w-16 h-16 bg-makelife-teal/20 rounded-lg flex items-center justify-center">
-                <span className="text-makelife-teal font-bold text-xl">ML</span>
+              <div className="w-16 h-16 bg-primary/20 rounded-lg flex items-center justify-center">
+                <span className="text-primary font-bold text-xl">ML</span>
               </div>
             </div>
           )}
         </div>
         
-        <div className="flex items-start justify-between">
-          <CardTitle className="text-lg font-semibold text-makelife-teal-dark group-hover:text-makelife-teal transition-colors">
+        <div className="flex items-start justify-between mb-2">
+          <CardTitle className="text-lg font-semibold text-primary group-hover:text-primary/80 transition-colors">
             {name}
           </CardTitle>
           <Badge 
             variant={category.includes('kits') || category.includes('terapeuticos') ? 'default' : 'secondary'}
-            className={category.includes('kits') || category.includes('terapeuticos') ? 'bg-makelife-teal text-white' : 'bg-makelife-teal-light text-makelife-teal-dark'}
           >
             {category === 'higiene-intima' && 'Higiene Íntima'}
             {category === 'hidratacao-anal' && 'Hidratação Anal'}
@@ -69,23 +68,23 @@ const ProductCard: React.FC<ProductCardProps> = ({
           </Badge>
         </div>
         
-        <CardDescription className="text-sm text-makelife-gray-medium line-clamp-2">
+        <CardDescription className="text-sm text-muted-foreground">
           {description}
         </CardDescription>
       </CardHeader>
 
       <CardContent className="pb-3">
-        <div className="space-y-2">
-          <div className="text-2xl font-bold text-makelife-teal">
+        <div className="space-y-3">
+          <div className="text-2xl font-bold text-primary">
             €{price.toFixed(2)}
           </div>
           
-          <div className="space-y-1">
-            <h4 className="text-sm font-medium text-makelife-teal-dark">Principais benefícios:</h4>
+          <div className="space-y-2">
+            <h4 className="text-sm font-medium text-foreground">Principais benefícios:</h4>
             <ul className="space-y-1">
               {features.slice(0, 3).map((feature, index) => (
-                <li key={index} className="text-xs text-makelife-gray-medium flex items-center">
-                  <div className="w-1.5 h-1.5 bg-makelife-teal rounded-full mr-2 flex-shrink-0" />
+                <li key={index} className="text-xs text-muted-foreground flex items-center">
+                  <div className="w-1.5 h-1.5 bg-primary rounded-full mr-2 flex-shrink-0" />
                   {feature}
                 </li>
               ))}
@@ -98,7 +97,7 @@ const ProductCard: React.FC<ProductCardProps> = ({
         {category === 'kits-completos' && name.includes('Profissional') ? (
           <Button 
             variant="outline" 
-            className="w-full border-makelife-teal text-makelife-teal hover:bg-makelife-teal hover:text-white"
+            className="w-full"
             onClick={handleViewDetails}
           >
             <Info className="w-4 h-4 mr-2" />
@@ -106,7 +105,7 @@ const ProductCard: React.FC<ProductCardProps> = ({
           </Button>
         ) : (
           <Button 
-            className="w-full bg-makelife-teal hover:bg-makelife-teal-dark"
+            className="w-full"
             onClick={handleAddToCart}
             disabled={!inStock}
           >
@@ -118,7 +117,7 @@ const ProductCard: React.FC<ProductCardProps> = ({
         <Button 
           variant="ghost" 
           size="sm" 
-          className="w-full text-makelife-teal hover:text-makelife-teal-dark"
+          className="w-full"
           onClick={handleViewDetails}
         >
           Ver Detalhes Técnicos

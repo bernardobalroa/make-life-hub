@@ -104,4 +104,11 @@
   .hover-lift {
     @apply transition-transform duration-300 hover:scale-105;
   }
+  
+  .line-clamp-2 {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+  }
 }
