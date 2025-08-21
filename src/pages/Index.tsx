@@ -14,29 +14,29 @@ const Index = () => {
   // Sample products data - com foco em particulares
   const featuredProducts = [
     {
-      id: 'procto-wash',
-      name: 'Procto Wash',
+      id: 'proctowash',
+      name: 'Proctowash',
       description: 'Sabonete íntimo específico para higiene da região anal, uso diário com pH equilibrado.',
-      price: 18.50,
-      category: 'consumer' as const,
+      price: 17.50,
+      category: 'higiene-intima' as const,
       features: ['pH equilibrado', 'Uso diário', 'Suavidade'],
       inStock: true
     },
     {
-      id: 'wipewash',
-      name: 'WipeWash',
+      id: 'wipewash-premium',
+      name: 'WipeWash Premium',
       description: 'Toalhitas húmidas especiais para higiene pós-cirúrgica e cuidados quotidianos.',
-      price: 12.90,
-      category: 'consumer' as const,
+      price: 13.50,
+      category: 'higiene-intima' as const,
       features: ['Pós-cirúrgico', 'Portátil', 'Testado dermatologicamente'],
       inStock: true
     },
     {
       id: 'hidraenema-pro',
-      name: 'Hidraenema Pro',
+      name: 'Hidraenema Pro 3g',
       description: 'Hidratante intranal com nanotecnologia de ácido hialurónico para protecção prolongada por 72h.',
-      price: 45.90,
-      category: 'professional' as const,
+      price: 52.50,
+      category: 'hidratacao-anal' as const,
       features: ['Hidratação 72h', 'Nanotecnologia', 'Uso clínico'],
       inStock: true
     }

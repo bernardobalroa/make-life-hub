@@ -10,7 +10,7 @@ interface ProductCardProps {
   name: string;
   description: string;
   price: number;
-  category: 'professional' | 'consumer';
+  category: 'higiene-intima' | 'hidratacao-anal' | 'dispositivos-limpeza' | 'cuidados-terapeuticos' | 'kits-completos';
   image?: string;
   features: string[];
   inStock: boolean;
@@ -58,10 +58,14 @@ const ProductCard: React.FC<ProductCardProps> = ({
             {name}
           </CardTitle>
           <Badge 
-            variant={category === 'professional' ? 'default' : 'secondary'}
-            className={category === 'professional' ? 'bg-makelife-teal text-white' : 'bg-makelife-teal-light text-makelife-teal-dark'}
+            variant={category.includes('kits') || category.includes('terapeuticos') ? 'default' : 'secondary'}
+            className={category.includes('kits') || category.includes('terapeuticos') ? 'bg-makelife-teal text-white' : 'bg-makelife-teal-light text-makelife-teal-dark'}
           >
-            {category === 'professional' ? 'Profissional' : 'Consumidor'}
+            {category === 'higiene-intima' && 'Higiene Íntima'}
+            {category === 'hidratacao-anal' && 'Hidratação Anal'}
+            {category === 'dispositivos-limpeza' && 'Dispositivos'}
+            {category === 'cuidados-terapeuticos' && 'Terapêutico'}
+            {category === 'kits-completos' && 'Kit Completo'}
           </Badge>
         </div>
         
@@ -91,16 +95,7 @@ const ProductCard: React.FC<ProductCardProps> = ({
       </CardContent>
 
       <CardFooter className="flex flex-col space-y-2">
-        {category === 'consumer' ? (
-          <Button 
-            className="w-full bg-makelife-teal hover:bg-makelife-teal-dark"
-            onClick={handleAddToCart}
-            disabled={!inStock}
-          >
-            <ShoppingCart className="w-4 h-4 mr-2" />
-            {inStock ? 'Adicionar ao Carrinho' : 'Fora de Stock'}
-          </Button>
-        ) : (
+        {category === 'kits-completos' && name.includes('Profissional') ? (
           <Button 
             variant="outline" 
             className="w-full border-makelife-teal text-makelife-teal hover:bg-makelife-teal hover:text-white"
@@ -108,6 +103,15 @@ const ProductCard: React.FC<ProductCardProps> = ({
           >
             <Info className="w-4 h-4 mr-2" />
             Solicitar Orçamento
+          </Button>
+        ) : (
+          <Button 
+            className="w-full bg-makelife-teal hover:bg-makelife-teal-dark"
+            onClick={handleAddToCart}
+            disabled={!inStock}
+          >
+            <ShoppingCart className="w-4 h-4 mr-2" />
+            {inStock ? 'Adicionar ao Carrinho' : 'Fora de Stock'}
           </Button>
         )}
         

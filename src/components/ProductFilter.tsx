@@ -49,9 +49,12 @@ const ProductFilter = ({
               <SelectValue placeholder="Selecionar categoria" />
             </SelectTrigger>
             <SelectContent>
-              <SelectItem value="all">Todos os Produtos</SelectItem>
-              <SelectItem value="consumer">Para Particulares</SelectItem>
-              <SelectItem value="professional">Para Profissionais</SelectItem>
+              <SelectItem value="all">Todas as categorias</SelectItem>
+              <SelectItem value="higiene-intima">Higiene Íntima</SelectItem>
+              <SelectItem value="hidratacao-anal">Hidratação Anal</SelectItem>
+              <SelectItem value="dispositivos-limpeza">Dispositivos de Limpeza</SelectItem>
+              <SelectItem value="cuidados-terapeuticos">Cuidados Terapêuticos</SelectItem>
+              <SelectItem value="kits-completos">Kits Completos</SelectItem>
             </SelectContent>
           </Select>
         </div>

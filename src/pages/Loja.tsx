@@ -5,7 +5,7 @@ import ProductFilter from '@/components/ProductFilter';
 import { Badge } from '@/components/ui/badge';
 import { Sparkles, Award, Shield } from 'lucide-react';
 
-export type ProductCategory = 'all' | 'consumer' | 'professional';
+export type ProductCategory = 'all' | 'higiene-intima' | 'hidratacao-anal' | 'dispositivos-limpeza' | 'cuidados-terapeuticos' | 'kits-completos';
 export type PriceRange = 'all' | 'low' | 'medium' | 'high';
 
 const Loja = () => {
