@@ -85,7 +85,7 @@ const ProdutosProfissionais = () => {
       icon: Microscope
     },
     {
-      title: "Suporte Científico Contínuo",
+      title: "Apoio Científico Contínuo",
       description: "Equipa médica disponível para esclarecimentos técnicos",
       icon: GraduationCap
     }
@@ -122,7 +122,7 @@ const ProdutosProfissionais = () => {
     <div className="min-h-screen bg-background">
       <Helmet>
         <title>Produtos Profissionais MakeLife - Soluções Proctológicas para Profissionais de Saúde</title>
-        <meta name="description" content="Gama profissional MakeLife para médicos proctologistas, enfermeiros e farmácias. Produtos certificados CE com eficácia clínica comprovada e suporte técnico especializado." />
+        <meta name="description" content="Gama profissional MakeLife para médicos proctologistas, enfermeiros e farmácias. Produtos certificados CE com eficácia clínica comprovada e apoio técnico especializado." />
         <meta name="keywords" content="produtos proctológicos profissionais, medicina proctológica, dispositivos médicos CE, hidraenema profissional, proctofarma" />
       </Helmet>
 
@@ -240,7 +240,7 @@ const ProdutosProfissionais = () => {
                         </ul>
                       </div>
                       <div>
-                        <h4 className="font-semibold mb-3">Suporte Incluído:</h4>
+                        <h4 className="font-semibold mb-3">Apoio Incluído:</h4>
                         <ul className="space-y-2">
                           <li className="flex items-center gap-2">
                             <CheckCircle className="h-4 w-4 text-primary" />
@@ -252,7 +252,7 @@ const ProdutosProfissionais = () => {
                           </li>
                           <li className="flex items-center gap-2">
                             <CheckCircle className="h-4 w-4 text-primary" />
-                            <span>Suporte científico direto</span>
+                            <span>Apoio científico direto</span>
                           </li>
                         </ul>
                       </div>
@@ -358,17 +358,17 @@ const ProdutosProfissionais = () => {
               <AccordionItem value="item-4">
                 <AccordionTrigger>Como solicitar amostras para avaliação clínica?</AccordionTrigger>
                 <AccordionContent>
-                  Profissionais de saúde podem solicitar amostras gratuitas através do nosso portal profissional. 
+                  Profissionais de saúde podem solicitar amostras gratuitas através do nosso portal profissional.
                   As amostras incluem instruções de uso e protocolos de avaliação para facilitar a introdução 
                   na prática clínica.
                 </AccordionContent>
               </AccordionItem>
 
               <AccordionItem value="item-5">
-                <AccordionTrigger>Que suporte técnico está disponível?</AccordionTrigger>
+                <AccordionTrigger>Que apoio técnico está disponível?</AccordionTrigger>
                 <AccordionContent>
-                  Oferecemos suporte técnico especializado através de linha directa para profissionais, 
-                  email técnico prioritário e consultas com a nossa equipa médica. O suporte inclui 
+                  Oferecemos apoio técnico especializado através de linha directa para profissionais, 
+                  email técnico prioritário e consultas com a nossa equipa médica. O apoio inclui
                   esclarecimentos sobre indicações, protocolos e resolução de casos clínicos específicos.
                 </AccordionContent>
               </AccordionItem>
@@ -384,7 +384,7 @@ const ProdutosProfissionais = () => {
             <h2 className="text-3xl md:text-4xl font-bold mb-6">Contacto Profissional</h2>
             <p className="text-xl mb-8 text-white/90">
               Equipa especializada disponível para apoiar profissionais de saúde com 
-              informação técnica, formação e suporte clínico personalizado.
+              informação técnica, formação e apoio clínico personalizado.
             </p>
             
             <div className="grid md:grid-cols-2 gap-8 mb-8">
@@ -398,7 +398,7 @@ const ProdutosProfissionais = () => {
                 <CardContent>
                   <p className="text-lg font-semibold mb-2">+351 800 200 300</p>
                   <p className="text-sm text-white/80">Segunda a Sexta: 9h-18h</p>
-                  <p className="text-sm text-white/80">Suporte técnico direto</p>
+                  <p className="text-sm text-white/80">Apoio técnico direto</p>
                 </CardContent>
               </Card>
 
@@ -412,7 +412,7 @@ const ProdutosProfissionais = () => {
                 <CardContent>
                   <p className="text-lg font-semibold mb-2">profissionais@makelife.eu</p>
                   <p className="text-sm text-white/80">Resposta em 24h</p>
-                  <p className="text-sm text-white/80">Suporte científico especializado</p>
+                  <p className="text-sm text-white/80">Apoio científico especializado</p>
                 </CardContent>
               </Card>
             </div>

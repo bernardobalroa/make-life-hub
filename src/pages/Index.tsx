@@ -198,7 +198,7 @@ const Index = () => {
               
               <p className="text-makelife-gray-medium mb-6">
                 Fundada em 2021 como braço do centro tecnológico Makelab, somos pioneiros em 
-                investigação científica dedicada aos cuidados da região anal. A nossa equipa de investigadores 
+                investigação científica dedicada aos cuidados da região anal. A nossa equipa de investigadores
                 desenvolve produtos patenteados com tecnologia inovadora, estabelecendo-nos como 
                 a 1ª marca em saúde proctológica na Europa.
               </p>
@@ -234,7 +234,7 @@ const Index = () => {
               <div className="bg-gradient-makelife rounded-2xl p-8 text-white">
                 <h3 className="text-xl font-bold mb-4">Nanotecnologia Avançada</h3>
                 <p className="mb-6">
-                  O nosso produto Hidraenema Pro utiliza nanotecnologia de hialuronato de sódio, 
+                  O nosso produto Hidraenema Pro utiliza nanotecnologia de hialuronato de sódio,
                   proporcionando hidratação prolongada e protecção superior dos tecidos anais, 
                   revolucionando os cuidados proctológicos.
                 </p>

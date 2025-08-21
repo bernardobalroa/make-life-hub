@@ -39,19 +39,19 @@ const OndeComprar = () => {
       type: "Farmácias Online",
       description: "Procuramos farmácias online estabelecidas para parceria estratégica",
       requirements: ["Certificação farmacêutica", "Plataforma e-commerce ativa", "Entrega nacional"],
-      benefits: ["Margens competitivas", "Suporte marketing", "Formação produtos"]
+      benefits: ["Margens competitivas", "Apoio marketing", "Formação produtos"]
     },
     {
       type: "Redes de Farmácias",
       description: "Interessados em parcerias com redes de farmácias físicas",
       requirements: ["Múltiplas localizações", "Farmacêuticos especializados", "Experiência produtos saúde"],
-      benefits: ["Preços especiais", "Material promocional", "Suporte técnico"]
+      benefits: ["Preços especiais", "Material promocional", "Apoio técnico"]
     },
     {
       type: "Distribuidores Médicos",
       description: "Buscamos distribuidores para mercados internacionais europeus",
       requirements: ["Experiência distribuição médica", "Rede estabelecida", "Certificações locais"],
-      benefits: ["Exclusividade territorial", "Margem distribuidor", "Suporte comercial"]
+      benefits: ["Exclusividade territorial", "Margem distribuidor", "Apoio comercial"]
     },
     {
       type: "Profissionais de Saúde",
@@ -66,7 +66,7 @@ const OndeComprar = () => {
       name: "Hospitais e Clínicas",
       description: "Fornecimento direto para unidades de saúde",
       contact: "hospitais@makelife.eu",
-      benefits: ["Preços especiais em volume", "Entrega programada", "Suporte técnico"]
+      benefits: ["Preços especiais em volume", "Entrega programada", "Apoio técnico"]
     },
     {
       name: "Consultórios Médicos",
@@ -178,7 +178,7 @@ const OndeComprar = () => {
 
               <Card className="max-w-4xl mx-auto">
                 <CardHeader>
-                  <CardTitle className="text-2xl text-center">Seja Nosso Parceiro Farmacêutico</CardTitle>
+                  <CardTitle className="text-2xl text-center">Seja o Nosso Parceiro Farmacêutico</CardTitle>
                   <CardDescription className="text-center text-lg">
                     Oferecemos condições especiais para farmácias que valorizam a inovação em saúde proctológica
                   </CardDescription>
@@ -205,7 +205,7 @@ const OndeComprar = () => {
                         </li>
                         <li className="flex items-center gap-2">
                           <div className="w-1.5 h-1.5 bg-primary rounded-full" />
-                          <span className="text-sm">Suporte científico contínuo</span>
+                          <span className="text-sm">Apoio científico contínuo</span>
                         </li>
                       </ul>
                     </div>
@@ -284,7 +284,7 @@ const OndeComprar = () => {
                         </li>
                         <li className="flex items-center gap-2">
                           <div className="w-1.5 h-1.5 bg-primary rounded-full" />
-                          <span className="text-sm">Suporte técnico 24/7</span>
+                          <span className="text-sm">Apoio técnico 24/7</span>
                         </li>
                       </ul>
                     </div>
@@ -409,7 +409,7 @@ const OndeComprar = () => {
                 <h2 className="text-3xl font-bold mb-4">Canais Profissionais</h2>
                 <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
                   Programas especiais para profissionais de saúde, hospitais e distribuidores. 
-                  Condições preferenciais e suporte técnico especializado.
+                  Condições preferenciais e apoio técnico especializado.
                 </p>
               </div>
 
@@ -457,7 +457,7 @@ const OndeComprar = () => {
       <section className="py-16 bg-muted/50">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl font-bold mb-6">Pronto para Ser Nosso Parceiro?</h2>
+            <h2 className="text-3xl font-bold mb-6">Pronto para Ser o Nosso Parceiro?</h2>
             <p className="text-xl text-muted-foreground mb-8">
               Entre em contacto connosco e descubra como podemos crescer juntos. 
               Respondemos a todas as propostas de parceria em 24 horas.

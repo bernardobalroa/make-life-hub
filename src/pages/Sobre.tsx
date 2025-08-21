@@ -200,7 +200,7 @@ const Sobre = () => {
               <h2 className="text-3xl md:text-4xl font-bold mb-6">A Nossa Missão</h2>
               <p className="text-lg text-muted-foreground mb-6">
                 Desenvolver e fornecer soluções médicas inovadoras e seguras para a saúde 
-                proctológica, melhorando a qualidade de vida dos nossos utilizadores através 
+                proctológica, melhorando a qualidade de vida dos nossos utilizadores através
                 de produtos cientificamente validados e clinicamente eficazes.
               </p>
               <div className="space-y-4">
@@ -250,7 +250,7 @@ const Sobre = () => {
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Os Nossos Valores</h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Os princípios que orientam todas as nossas decisões e acções, 
+              Os princípios que orientam todas as nossas decisões e acções,
               garantindo que mantemos sempre o foco no que realmente importa.
             </p>
           </div>

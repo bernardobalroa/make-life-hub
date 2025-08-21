@@ -166,7 +166,7 @@ const ProfissionaisSaude = () => {
       title: 'Estudos Clínicos',
       description: 'Participação em estudos multicêntricos de eficácia',
       requirements: ['Experiência em investigação', 'Comité de ética ativo', 'Estrutura adequada'],
-      benefits: ['Acesso antecipado', 'Suporte financeiro', 'Publicações conjuntas']
+      benefits: ['Acesso antecipado', 'Apoio financeiro', 'Publicações conjuntas']
     },
     {
       title: 'Casos de Estudo',
@@ -216,7 +216,7 @@ const ProfissionaisSaude = () => {
   const faqProfessional = [
     {
       question: 'Como me torno um profissional parceiro da MakeLife?',
-      answer: 'O processo é simples: preencha o formulário de contacto profissional, nossa equipa científica entrará em contacto para avaliar a parceria e definir os termos de colaboração adequados ao seu perfil profissional.'
+      answer: 'O processo é simples: preencha o formulário de contacto profissional, a nossa equipa científica entrará em contacto para avaliar a parceria e definir os termos de colaboração adequados ao seu perfil profissional.'
     },
     {
       question: 'Que tipo de formação está disponível?',
@@ -227,12 +227,12 @@ const ProfissionaisSaude = () => {
       answer: 'Profissionais registados têm acesso completo ao nosso portal científico com estudos clínicos, protocolos de uso, casos de estudo e bibliografia atualizada constantemente.'
     },
     {
-      question: 'Existe suporte para implementação nos serviços?',
-      answer: 'Sim, fornecemos suporte completo incluindo formação de equipas, protocolos personalizados, material educativo e acompanhamento durante o período de implementação.'
+      question: 'Existe apoio para implementação nos serviços?',
+      answer: 'Sim, fornecemos apoio completo incluindo formação de equipas, protocolos personalizados, material educativo e acompanhamento durante o período de implementação.'
     },
     {
       question: 'Como funciona o programa de investigação?',
-      answer: 'Colaboramos com centros de investigação em estudos clínicos, oferecendo suporte metodológico, financiamento parcial e oportunidades de publicação em revistas científicas.'
+      answer: 'Colaboramos com centros de investigação em estudos clínicos, oferecendo apoio metodológico, financiamento parcial e oportunidades de publicação em revistas científicas.'
     }
   ];
 
