@@ -85,7 +85,7 @@ const ProfissionaisSaude = () => {
         'Produtos cientificamente validados',
         'Protocolos clínicos específicos',
         'Formação técnica especializada',
-        'Suporte científico contínuo'
+        'Apoio científico contínuo'
       ],
       products: ['Hidraenema Pro', 'Proctofarma Hemo', 'WipeWash Premium'],
       stats: { professionals: '150+', satisfaction: '98%', countries: '12' }
@@ -99,7 +99,7 @@ const ProfissionaisSaude = () => {
         'Facilidade de aplicação',
         'Protocolos de cuidados',
         'Material educativo para pacientes',
-        'Linha de apoio técnico'
+                'Linha de apoio técnico'
       ],
       products: ['WipeWash Premium', 'Hidraenema 3g', 'Lowash Pro'],
       stats: { professionals: '300+', satisfaction: '96%', hospitals: '25+' }
@@ -113,7 +113,7 @@ const ProfissionaisSaude = () => {
         'Margens competitivas',
         'Material promocional',
         'Formação em produtos',
-        'Suporte comercial'
+        'Apoio comercial'
       ],
       products: ['Toda a gama MakeLife', 'Kits promocionais', 'Material educativo'],
       stats: { pharmacies: '200+', growth: '+45%', regions: '18' }
@@ -239,9 +239,9 @@ const ProfissionaisSaude = () => {
   return (
     <div className="min-h-screen bg-background">
       <Helmet>
-        <title>Profissionais de Saúde MakeLife - Parcerias, Formação e Suporte Especializado</title>
-        <meta name="description" content="Programa exclusivo MakeLife para profissionais de saúde. Formação especializada, suporte científico, parcerias de investigação e produtos certificados para proctologia." />
-        <meta name="keywords" content="profissionais saúde makelife, formação médica proctologia, parcerias científicas, suporte técnico médicos" />
+        <title>Profissionais de Saúde MakeLife - Parcerias, Formação e Apoio Especializado</title>
+        <meta name="description" content="Programa exclusivo MakeLife para profissionais de saúde. Formação especializada, apoio científico, parcerias de investigação e produtos certificados para proctologia." />
+        <meta name="keywords" content="profissionais saúde makelife, formação médica proctologia, parcerias científicas, apoio técnico médicos" />
       </Helmet>
 
       <Header />
@@ -259,7 +259,7 @@ const ProfissionaisSaude = () => {
             </h1>
             <p className="text-xl md:text-2xl mb-8 text-white/90 max-w-3xl mx-auto">
               Junte-se a uma rede de profissionais que confiam na MakeLife. 
-              Acesso exclusivo a formação, investigação e suporte científico especializado.
+              Acesso exclusivo a formação, investigação e apoio científico especializado.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" variant="outline" className="bg-white/10 border-white text-white hover:bg-white hover:text-primary">
@@ -293,7 +293,7 @@ const ProfissionaisSaude = () => {
             </div>
             <div>
               <div className="text-3xl font-bold text-primary mb-2">24h</div>
-              <p className="text-sm text-muted-foreground">Suporte Técnico</p>
+              <p className="text-sm text-muted-foreground">Apoio Técnico</p>
             </div>
           </div>
         </div>
@@ -490,9 +490,9 @@ const ProfissionaisSaude = () => {
       <section className="py-16 bg-card">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Suporte Exclusivo</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">Apoio Exclusivo</h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Acesso prioritário a suporte técnico e científico especializado.
+              Acesso prioritário a apoio técnico e científico especializado.
             </p>
           </div>
 
@@ -596,7 +596,7 @@ const ProfissionaisSaude = () => {
                     >
                       <option value="geral">Informações Gerais</option>
                       <option value="produtos">Produtos Específicos</option>
-                      <option value="formacao">Programas de Formação</option>
+                <option value="formacao">Programas de Formação</option>
                       <option value="investigacao">Parcerias de Investigação</option>
                       <option value="distribuicao">Distribuição/Venda</option>
                     </select>

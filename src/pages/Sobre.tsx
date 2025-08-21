@@ -153,7 +153,7 @@ const Sobre = () => {
     <div className="min-h-screen bg-background">
       <Helmet>
         <title>Sobre a MakeLife - Inovação em Saúde Proctológica e Bem-estar</title>
-        <meta name="description" content="Conheça a MakeLife: empresa portuguesa pioneira em soluções proctológicas inovadoras. Nossa missão, valores, equipa científica e compromisso com a excelência médica." />
+        <meta name="description" content="Conheça a MakeLife: empresa portuguesa pioneira em soluções proctológicas inovadoras. A nossa missão, valores, equipa científica e compromisso com a excelência médica." />
         <meta name="keywords" content="sobre makelife, empresa proctologia, inovação médica portugal, dispositivos médicos, equipa científica" />
       </Helmet>
 
@@ -197,7 +197,7 @@ const Sobre = () => {
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-3xl md:text-4xl font-bold mb-6">Nossa Missão</h2>
+              <h2 className="text-3xl md:text-4xl font-bold mb-6">A Nossa Missão</h2>
               <p className="text-lg text-muted-foreground mb-6">
                 Desenvolver e fornecer soluções médicas inovadoras e seguras para a saúde 
                 proctológica, melhorando a qualidade de vida dos nossos utilizadores através 
@@ -219,7 +219,7 @@ const Sobre = () => {
               </div>
             </div>
             <div>
-              <h2 className="text-3xl md:text-4xl font-bold mb-6">Nossa Visão</h2>
+              <h2 className="text-3xl md:text-4xl font-bold mb-6">A Nossa Visão</h2>
               <p className="text-lg text-muted-foreground mb-6">
                 Ser a empresa de referência europeia em soluções proctológicas inovadoras, 
                 reconhecida pela excelência científica, qualidade dos produtos e impacto 
@@ -248,7 +248,7 @@ const Sobre = () => {
       <section className="py-16 bg-muted/50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Nossos Valores</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">Os Nossos Valores</h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
               Os princípios que orientam todas as nossas decisões e acções, 
               garantindo que mantemos sempre o foco no que realmente importa.
@@ -277,7 +277,7 @@ const Sobre = () => {
       <section className="py-16">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Nossa Jornada</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">A Nossa Jornada</h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
               Desde a fundação, temos percorrido um caminho de crescimento sustentado, 
               inovação e compromisso com a excelência.
@@ -316,7 +316,7 @@ const Sobre = () => {
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Equipa de Liderança</h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Profissionais experientes e dedicados que lideram a nossa missão 
+              Profissionais experientes e dedicados que lideram a nossa missão
               de inovação em saúde proctológica.
             </p>
           </div>
@@ -377,7 +377,7 @@ const Sobre = () => {
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold mb-6">Junte-se à Nossa Missão</h2>
             <p className="text-xl mb-8 text-white/90">
-              Procuramos parceiros, profissionais e colaboradores que partilhem 
+              Procuramos parceiros, profissionais e colaboradores que partilhem
               a nossa visão de melhorar a saúde e qualidade de vida das pessoas.
             </p>
             

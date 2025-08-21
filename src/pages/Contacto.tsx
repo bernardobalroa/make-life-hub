@@ -79,7 +79,7 @@ const Contacto = () => {
       description: "Envie-nos a sua questão",
       contact: "apoio@makelife.eu",
       availability: "Resposta em 24h",
-      type: "Suporte prioritário"
+      type: "Apoio prioritário"
     },
     {
       icon: MessageCircle,
@@ -164,8 +164,8 @@ const Contacto = () => {
     <div className="min-h-screen bg-background">
       <Helmet>
         <title>Contacto MakeLife - Apoio ao Cliente e Informações Especializadas</title>
-        <meta name="description" content="Entre em contacto com a MakeLife. Apoio especializado, informações sobre produtos proctológicos e suporte personalizado. Linha gratuita, email e WhatsApp disponíveis." />
-        <meta name="keywords" content="contacto makelife, apoio cliente, suporte proctologia, informações produtos, linha de apoio" />
+        <meta name="description" content="Entre em contacto com a MakeLife. Apoio especializado, informações sobre produtos proctológicos e assistência personalizada. Linha gratuita, email e WhatsApp disponíveis." />
+        <meta name="keywords" content="contacto makelife, apoio cliente, assistência proctologia, informações produtos, linha de apoio" />
       </Helmet>
 
       <Header />
@@ -182,8 +182,8 @@ const Contacto = () => {
               <span className="block text-white/90">Para Si</span>
             </h1>
             <p className="text-xl md:text-2xl mb-8 text-white/90 max-w-3xl mx-auto">
-              A sua saúde e bem-estar são a nossa prioridade. Entre em contacto connosco 
-              para esclarecimentos, suporte ou orientação especializada.
+              A sua saúde e bem-estar são a nossa prioridade. Entre em contacto connosco
+              para esclarecimentos, apoio ou orientação especializada.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -407,7 +407,7 @@ const Contacto = () => {
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Tipos de Apoio Disponível</h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Oferecemos suporte especializado em diferentes áreas para melhor o atender
+              Oferecemos apoio especializado em diferentes áreas para melhor o atender
             </p>
           </div>
 
