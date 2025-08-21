@@ -24,123 +24,40 @@ import {
   CheckCircle,
   Star,
   Navigation,
-  Filter
+  Filter,
+  Mail,
+  Target,
+  Award
 } from 'lucide-react';
 
 const OndeComprar = () => {
   const [searchLocation, setSearchLocation] = useState('');
   const [selectedDistrict, setSelectedDistrict] = useState('todos');
 
-  const onlinePartners = [
+  const partnershipOpportunities = [
     {
-      name: "Farmacias.com.pt",
-      type: "Farmácia Online",
-      description: "Maior rede de farmácias online de Portugal",
-      logo: "/api/placeholder/120/60",
-      url: "https://farmacias.com.pt",
-      delivery: "24-48h",
-      rating: 4.8,
-      verified: true
+      type: "Farmácias Online",
+      description: "Procuramos farmácias online estabelecidas para parceria estratégica",
+      requirements: ["Certificação farmacêutica", "Plataforma e-commerce ativa", "Entrega nacional"],
+      benefits: ["Margens competitivas", "Suporte marketing", "Formação produtos"]
     },
     {
-      name: "WellsOnline",
-      type: "Parafarmácia",
-      description: "Especializada em produtos de saúde e bem-estar",
-      logo: "/api/placeholder/120/60",
-      url: "https://wellsonline.pt",
-      delivery: "48-72h",
-      rating: 4.6,
-      verified: true
+      type: "Redes de Farmácias",
+      description: "Interessados em parcerias com redes de farmácias físicas",
+      requirements: ["Múltiplas localizações", "Farmacêuticos especializados", "Experiência produtos saúde"],
+      benefits: ["Preços especiais", "Material promocional", "Suporte técnico"]
     },
     {
-      name: "Farmácia Moderna",
-      type: "Farmácia Online",
-      description: "Farmácia certificada com entrega em toda a Europa",
-      logo: "/api/placeholder/120/60",
-      url: "https://farmaciamoderna.pt",
-      delivery: "24-48h",
-      rating: 4.9,
-      verified: true
+      type: "Distribuidores Médicos",
+      description: "Buscamos distribuidores para mercados internacionais europeus",
+      requirements: ["Experiência distribuição médica", "Rede estabelecida", "Certificações locais"],
+      benefits: ["Exclusividade territorial", "Margem distribuidor", "Suporte comercial"]
     },
     {
-      name: "MimoShop",
-      type: "E-commerce Saúde",
-      description: "Plataforma especializada em produtos de higiene íntima",
-      logo: "/api/placeholder/120/60",
-      url: "https://mimoshop.pt",
-      delivery: "48h",
-      rating: 4.7,
-      verified: true
-    }
-  ];
-
-  const physicalStores = [
-    {
-      name: "Farmácias Holon",
-      district: "Lisboa",
-      locations: 12,
-      type: "Rede de Farmácias",
-      phone: "+351 21 xxx xxxx",
-      specialization: "Proctologia e Gastroenterologia",
-      verified: true
-    },
-    {
-      name: "Farmácias Saúde Moderna",
-      district: "Porto",
-      locations: 8,
-      type: "Rede de Farmácias",
-      phone: "+351 22 xxx xxxx",
-      specialization: "Produtos Especializados",
-      verified: true
-    },
-    {
-      name: "Grupo Farmácia Central",
-      district: "Coimbra",
-      locations: 5,
-      type: "Rede de Farmácias",
-      phone: "+351 23 xxx xxxx",
-      specialization: "Medicina Familiar",
-      verified: true
-    },
-    {
-      name: "Farmácias do Algarve",
-      district: "Faro",
-      locations: 15,
-      type: "Rede Regional",
-      phone: "+351 28 xxx xxxx",
-      specialization: "Turismo de Saúde",
-      verified: true
-    }
-  ];
-
-  const internationalDistributors = [
-    {
-      country: "Espanha",
-      distributor: "Distribuciones Médicas Iberia",
-      contact: "comercial@dmiberia.es",
-      regions: ["Madrid", "Barcelona", "Sevilla", "Valencia"],
-      type: "Distribuidor Oficial"
-    },
-    {
-      country: "França",
-      distributor: "MediFrance Distribution",
-      contact: "info@medifrance.fr",
-      regions: ["Paris", "Lyon", "Marseille", "Lille"],
-      type: "Parceiro Estratégico"
-    },
-    {
-      country: "Itália",
-      distributor: "Salute Italia Srl",
-      contact: "vendite@saluteitalia.it",
-      regions: ["Roma", "Milano", "Napoli", "Torino"],
-      type: "Distribuidor Oficial"
-    },
-    {
-      country: "Alemanha",
-      distributor: "Deutsche Medizin Import",
-      contact: "bestellung@dmi.de",
-      regions: ["Berlin", "München", "Hamburg", "Köln"],
-      type: "Parceiro Oficial"
+      type: "Profissionais de Saúde",
+      description: "Parcerias com médicos proctologistas e clínicas especializadas",
+      requirements: ["Especialização proctológica", "Prática ativa", "Interesse inovação"],
+      benefits: ["Amostras gratuitas", "Formação especializada", "Material científico"]
     }
   ];
 
@@ -170,9 +87,6 @@ const OndeComprar = () => {
     "Setúbal", "Leiria", "Santarém", "Évora", "Beja", "Viana do Castelo"
   ];
 
-  const filteredStores = physicalStores.filter(store => 
-    selectedDistrict === 'todos' || store.district === selectedDistrict
-  );
 
   return (
     <div className="min-h-screen bg-background">
@@ -189,52 +103,41 @@ const OndeComprar = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
-              Onde Comprar
-              <span className="block text-white/90">Produtos MakeLife</span>
+              Procuramos Parceiros
+              <span className="block text-white/90">Como Você</span>
             </h1>
             <p className="text-xl md:text-2xl mb-8 text-white/90">
-              Encontre o canal de venda mais próximo de si. Disponível em farmácias, 
-              lojas online e através de distribuidores oficiais em toda a Europa.
+              Estamos a construir uma rede de parceiros para distribuir os produtos MakeLife. 
+              Junte-se a nós e faça parte da revolução na saúde proctológica.
             </p>
             
-            {/* Search Bar */}
-            <div className="max-w-md mx-auto bg-white/10 rounded-lg p-4 backdrop-blur-sm">
-              <div className="flex items-center gap-3">
-                <Search className="h-5 w-5 text-white/70" />
-                <Input 
-                  placeholder="Introduza a sua localização..."
-                  value={searchLocation}
-                  onChange={(e) => setSearchLocation(e.target.value)}
-                  className="bg-transparent border-white/30 text-white placeholder:text-white/70"
-                />
-                <Button variant="secondary" size="sm">
-                  <Navigation className="h-4 w-4" />
-                </Button>
-              </div>
-            </div>
+            <Button size="lg" variant="outline" className="bg-white/10 border-white text-white hover:bg-white hover:text-primary">
+              <Mail className="mr-2 h-5 w-5" />
+              Torne-se Parceiro
+            </Button>
           </div>
         </div>
       </section>
 
-      {/* Quick Stats */}
+      {/* Partnership Stats */}
       <section className="py-12 bg-card">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
             <div>
-              <div className="text-3xl font-bold text-primary mb-2">150+</div>
-              <p className="text-sm text-muted-foreground">Farmácias Parceiras</p>
+              <div className="text-3xl font-bold text-primary mb-2">100%</div>
+              <p className="text-sm text-muted-foreground">Inovação Científica</p>
             </div>
             <div>
-              <div className="text-3xl font-bold text-primary mb-2">25+</div>
-              <p className="text-sm text-muted-foreground">Lojas Online</p>
+              <div className="text-3xl font-bold text-primary mb-2">CE</div>
+              <p className="text-sm text-muted-foreground">Certificação Médica</p>
             </div>
             <div>
-              <div className="text-3xl font-bold text-primary mb-2">12</div>
-              <p className="text-sm text-muted-foreground">Países Europeus</p>
+              <div className="text-3xl font-bold text-primary mb-2">24h</div>
+              <p className="text-sm text-muted-foreground">Resposta a Parceiros</p>
             </div>
             <div>
-              <div className="text-3xl font-bold text-primary mb-2">24-48h</div>
-              <p className="text-sm text-muted-foreground">Entrega Média</p>
+              <div className="text-3xl font-bold text-primary mb-2">EU</div>
+              <p className="text-sm text-muted-foreground">Expansão Europeia</p>
             </div>
           </div>
         </div>
@@ -243,19 +146,19 @@ const OndeComprar = () => {
       {/* Main Content */}
       <section className="py-16">
         <div className="container mx-auto px-4">
-          <Tabs defaultValue="online" className="w-full">
+          <Tabs defaultValue="farmacia" className="w-full">
             <TabsList className="grid w-full grid-cols-4 mb-8">
+              <TabsTrigger value="farmacia" className="flex items-center gap-2">
+                <Store className="h-4 w-4" />
+                <span className="hidden sm:inline">Farmácias</span>
+              </TabsTrigger>
               <TabsTrigger value="online" className="flex items-center gap-2">
                 <Globe className="h-4 w-4" />
                 <span className="hidden sm:inline">Online</span>
               </TabsTrigger>
-              <TabsTrigger value="fisicas" className="flex items-center gap-2">
-                <Store className="h-4 w-4" />
-                <span className="hidden sm:inline">Farmácias</span>
-              </TabsTrigger>
-              <TabsTrigger value="internacional" className="flex items-center gap-2">
+              <TabsTrigger value="distribuidor" className="flex items-center gap-2">
                 <Truck className="h-4 w-4" />
-                <span className="hidden sm:inline">Internacional</span>
+                <span className="hidden sm:inline">Distribuição</span>
               </TabsTrigger>
               <TabsTrigger value="profissional" className="flex items-center gap-2">
                 <Stethoscope className="h-4 w-4" />
@@ -263,190 +166,241 @@ const OndeComprar = () => {
               </TabsTrigger>
             </TabsList>
 
-            {/* Online Stores */}
+            {/* Pharmacy Partnership */}
+            <TabsContent value="farmacia" className="space-y-6">
+              <div className="text-center mb-8">
+                <h2 className="text-3xl font-bold mb-4">Parceria com Farmácias</h2>
+                <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+                  Procuramos farmácias inovadoras para fazer parte da rede de distribuição MakeLife. 
+                  Produtos certificados CE com elevada procura e margens atrativas.
+                </p>
+              </div>
+
+              <Card className="max-w-4xl mx-auto">
+                <CardHeader>
+                  <CardTitle className="text-2xl text-center">Seja Nosso Parceiro Farmacêutico</CardTitle>
+                  <CardDescription className="text-center text-lg">
+                    Oferecemos condições especiais para farmácias que valorizam a inovação em saúde proctológica
+                  </CardDescription>
+                </CardHeader>
+                <CardContent className="space-y-6">
+                  <div className="grid md:grid-cols-2 gap-6">
+                    <div>
+                      <h4 className="font-semibold mb-3 flex items-center gap-2">
+                        <CheckCircle className="h-5 w-5 text-primary" />
+                        O que Oferecemos:
+                      </h4>
+                      <ul className="space-y-2">
+                        <li className="flex items-center gap-2">
+                          <div className="w-1.5 h-1.5 bg-primary rounded-full" />
+                          <span className="text-sm">Margens competitivas (40-50%)</span>
+                        </li>
+                        <li className="flex items-center gap-2">
+                          <div className="w-1.5 h-1.5 bg-primary rounded-full" />
+                          <span className="text-sm">Material promocional gratuito</span>
+                        </li>
+                        <li className="flex items-center gap-2">
+                          <div className="w-1.5 h-1.5 bg-primary rounded-full" />
+                          <span className="text-sm">Formação técnica para farmacêuticos</span>
+                        </li>
+                        <li className="flex items-center gap-2">
+                          <div className="w-1.5 h-1.5 bg-primary rounded-full" />
+                          <span className="text-sm">Suporte científico contínuo</span>
+                        </li>
+                      </ul>
+                    </div>
+                    <div>
+                      <h4 className="font-semibold mb-3 flex items-center gap-2">
+                        <Target className="h-5 w-5 text-primary" />
+                        Procuramos:
+                      </h4>
+                      <ul className="space-y-2">
+                        <li className="flex items-center gap-2">
+                          <div className="w-1.5 h-1.5 bg-primary rounded-full" />
+                          <span className="text-sm">Farmácias com certificação ativa</span>
+                        </li>
+                        <li className="flex items-center gap-2">
+                          <div className="w-1.5 h-1.5 bg-primary rounded-full" />
+                          <span className="text-sm">Interesse em produtos inovadores</span>
+                        </li>
+                        <li className="flex items-center gap-2">
+                          <div className="w-1.5 h-1.5 bg-primary rounded-full" />
+                          <span className="text-sm">Compromisso com aconselhamento</span>
+                        </li>
+                        <li className="flex items-center gap-2">
+                          <div className="w-1.5 h-1.5 bg-primary rounded-full" />
+                          <span className="text-sm">Localização estratégica</span>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  
+                  <div className="text-center pt-4">
+                    <Button size="lg" className="bg-primary hover:bg-primary/90">
+                      <Mail className="mr-2 h-5 w-5" />
+                      Enviar Email: farmacias@makelife.eu
+                    </Button>
+                  </div>
+                </CardContent>
+              </Card>
+            </TabsContent>
+
+            {/* Online Partnership */}
             <TabsContent value="online" className="space-y-6">
               <div className="text-center mb-8">
-                <h2 className="text-3xl font-bold mb-4">Lojas Online Oficiais</h2>
+                <h2 className="text-3xl font-bold mb-4">Parceria E-commerce</h2>
                 <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-                  Compre com segurança através dos nossos parceiros online certificados. 
-                  Entrega rápida e produtos com garantia de autenticidade.
+                  Buscamos plataformas de e-commerce especializadas em saúde para distribuição online. 
+                  Produtos com alta conversão e excelente reputação no mercado.
                 </p>
               </div>
 
-              <div className="grid md:grid-cols-2 gap-6">
-                {onlinePartners.map((partner, index) => (
-                  <Card key={index} className="hover:shadow-lg transition-all duration-300 group">
-                    <CardHeader>
-                      <div className="flex items-start justify-between">
-                        <div className="flex items-center gap-4">
-                          <div className="w-16 h-8 bg-muted rounded flex items-center justify-center">
-                            <Building className="h-4 w-4 text-muted-foreground" />
-                          </div>
-                          <div>
-                            <div className="flex items-center gap-2">
-                              <CardTitle className="text-lg">{partner.name}</CardTitle>
-                              {partner.verified && (
-                                <Badge variant="secondary" className="text-xs">
-                                  <CheckCircle className="h-3 w-3 mr-1" />
-                                  Verificado
-                                </Badge>
-                              )}
-                            </div>
-                            <CardDescription>{partner.type}</CardDescription>
-                          </div>
-                        </div>
-                        <div className="flex items-center gap-1">
-                          <Star className="h-4 w-4 fill-yellow-400 text-yellow-400" />
-                          <span className="text-sm font-medium">{partner.rating}</span>
-                        </div>
-                      </div>
-                    </CardHeader>
-                    <CardContent className="space-y-4">
-                      <p className="text-sm text-muted-foreground">{partner.description}</p>
-                      
-                      <div className="flex items-center justify-between">
-                        <div className="flex items-center gap-2">
-                          <Clock className="h-4 w-4 text-muted-foreground" />
-                          <span className="text-sm">Entrega: {partner.delivery}</span>
-                        </div>
-                        <Button variant="outline" size="sm" className="group-hover:bg-primary group-hover:text-white">
-                          <ExternalLink className="h-4 w-4 mr-2" />
-                          Visitar Loja
-                        </Button>
-                      </div>
-                    </CardContent>
-                  </Card>
-                ))}
-              </div>
+              <Card className="max-w-4xl mx-auto">
+                <CardHeader>
+                  <CardTitle className="text-2xl text-center">Parceiro E-commerce Ideal</CardTitle>
+                  <CardDescription className="text-center text-lg">
+                    Procuramos lojas online estabelecidas no setor da saúde e bem-estar
+                  </CardDescription>
+                </CardHeader>
+                <CardContent className="space-y-6">
+                  <div className="grid md:grid-cols-2 gap-6">
+                    <div>
+                      <h4 className="font-semibold mb-3 flex items-center gap-2">
+                        <CheckCircle className="h-5 w-5 text-primary" />
+                        Vantagens da Parceria:
+                      </h4>
+                      <ul className="space-y-2">
+                        <li className="flex items-center gap-2">
+                          <div className="w-1.5 h-1.5 bg-primary rounded-full" />
+                          <span className="text-sm">Produtos exclusivos e inovadores</span>
+                        </li>
+                        <li className="flex items-center gap-2">
+                          <div className="w-1.5 h-1.5 bg-primary rounded-full" />
+                          <span className="text-sm">Marketing digital conjunto</span>
+                        </li>
+                        <li className="flex items-center gap-2">
+                          <div className="w-1.5 h-1.5 bg-primary rounded-full" />
+                          <span className="text-sm">Conteúdo científico para SEO</span>
+                        </li>
+                        <li className="flex items-center gap-2">
+                          <div className="w-1.5 h-1.5 bg-primary rounded-full" />
+                          <span className="text-sm">Suporte técnico 24/7</span>
+                        </li>
+                      </ul>
+                    </div>
+                    <div>
+                      <h4 className="font-semibold mb-3 flex items-center gap-2">
+                        <Target className="h-5 w-5 text-primary" />
+                        Perfil Pretendido:
+                      </h4>
+                      <ul className="space-y-2">
+                        <li className="flex items-center gap-2">
+                          <div className="w-1.5 h-1.5 bg-primary rounded-full" />
+                          <span className="text-sm">Plataforma e-commerce consolidada</span>
+                        </li>
+                        <li className="flex items-center gap-2">
+                          <div className="w-1.5 h-1.5 bg-primary rounded-full" />
+                          <span className="text-sm">Foco em produtos de saúde</span>
+                        </li>
+                        <li className="flex items-center gap-2">
+                          <div className="w-1.5 h-1.5 bg-primary rounded-full" />
+                          <span className="text-sm">Entrega nacional/internacional</span>
+                        </li>
+                        <li className="flex items-center gap-2">
+                          <div className="w-1.5 h-1.5 bg-primary rounded-full" />
+                          <span className="text-sm">Certificações e-commerce</span>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  
+                  <div className="text-center pt-4">
+                    <Button size="lg" className="bg-primary hover:bg-primary/90">
+                      <Mail className="mr-2 h-5 w-5" />
+                      Enviar Email: ecommerce@makelife.eu
+                    </Button>
+                  </div>
+                </CardContent>
+              </Card>
             </TabsContent>
 
-            {/* Physical Stores */}
-            <TabsContent value="fisicas" className="space-y-6">
+            {/* Distribution Partnership */}
+            <TabsContent value="distribuidor" className="space-y-6">
               <div className="text-center mb-8">
-                <h2 className="text-3xl font-bold mb-4">Farmácias e Lojas Físicas</h2>
+                <h2 className="text-3xl font-bold mb-4">Distribuidores Europeus</h2>
                 <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-                  Rede de farmácias parceiras em todo o país. Encontre a mais próxima 
-                  de si e receba aconselhamento farmacêutico especializado.
+                  Estamos a expandir para toda a Europa e procuramos distribuidores 
+                  especializados em dispositivos médicos para parcerias estratégicas.
                 </p>
               </div>
 
-              {/* Filter */}
-              <div className="flex items-center gap-4 mb-6">
-                <Filter className="h-5 w-5 text-muted-foreground" />
-                <select 
-                  value={selectedDistrict}
-                  onChange={(e) => setSelectedDistrict(e.target.value)}
-                  className="px-3 py-2 border rounded-md bg-background"
-                >
-                  {districts.map(district => (
-                    <option key={district} value={district}>
-                      {district === 'todos' ? 'Todos os Distritos' : district}
-                    </option>
-                  ))}
-                </select>
-              </div>
-
-              <div className="grid md:grid-cols-2 gap-6">
-                {filteredStores.map((store, index) => (
-                  <Card key={index} className="hover:shadow-lg transition-all duration-300">
-                    <CardHeader>
-                      <div className="flex items-start justify-between">
-                        <div>
-                          <div className="flex items-center gap-2">
-                            <CardTitle className="text-lg">{store.name}</CardTitle>
-                            {store.verified && (
-                              <Badge variant="secondary" className="text-xs">
-                                <CheckCircle className="h-3 w-3 mr-1" />
-                                Parceiro Oficial
-                              </Badge>
-                            )}
-                          </div>
-                          <CardDescription>{store.type}</CardDescription>
-                        </div>
-                        <Badge variant="outline">{store.district}</Badge>
-                      </div>
-                    </CardHeader>
-                    <CardContent className="space-y-3">
-                      <div className="flex items-center gap-2">
-                        <MapPin className="h-4 w-4 text-muted-foreground" />
-                        <span className="text-sm">{store.locations} localizações</span>
-                      </div>
-                      
-                      <div className="flex items-center gap-2">
-                        <Phone className="h-4 w-4 text-muted-foreground" />
-                        <span className="text-sm">{store.phone}</span>
-                      </div>
-
-                      <div className="flex items-center gap-2">
-                        <Stethoscope className="h-4 w-4 text-muted-foreground" />
-                        <span className="text-sm">{store.specialization}</span>
-                      </div>
-
-                      <div className="flex gap-2 pt-2">
-                        <Button variant="outline" size="sm" className="flex-1">
-                          <MapPin className="h-4 w-4 mr-2" />
-                          Ver Locais
-                        </Button>
-                        <Button variant="outline" size="sm" className="flex-1">
-                          <Phone className="h-4 w-4 mr-2" />
-                          Contactar
-                        </Button>
-                      </div>
-                    </CardContent>
-                  </Card>
-                ))}
-              </div>
-            </TabsContent>
-
-            {/* International */}
-            <TabsContent value="internacional" className="space-y-6">
-              <div className="text-center mb-8">
-                <h2 className="text-3xl font-bold mb-4">Distribuidores Internacionais</h2>
-                <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-                  Produtos MakeLife disponíveis em toda a Europa através da nossa 
-                  rede de distribuidores oficiais e parceiros estratégicos.
-                </p>
-              </div>
-
-              <div className="grid md:grid-cols-2 gap-6">
-                {internationalDistributors.map((distributor, index) => (
-                  <Card key={index} className="hover:shadow-lg transition-all duration-300">
-                    <CardHeader>
-                      <div className="flex items-center gap-4">
-                        <div className="w-12 h-8 bg-muted rounded flex items-center justify-center">
-                          <Globe className="h-5 w-5 text-muted-foreground" />
-                        </div>
-                        <div>
-                          <CardTitle className="text-lg">{distributor.country}</CardTitle>
-                          <CardDescription>{distributor.distributor}</CardDescription>
-                        </div>
-                        <Badge variant={distributor.type.includes('Oficial') ? 'default' : 'secondary'}>
-                          {distributor.type}
-                        </Badge>
-                      </div>
-                    </CardHeader>
-                    <CardContent className="space-y-3">
-                      <div>
-                        <h4 className="font-medium mb-2">Regiões Cobertas:</h4>
-                        <div className="flex flex-wrap gap-2">
-                          {distributor.regions.map((region, idx) => (
-                            <Badge key={idx} variant="outline" className="text-xs">
-                              {region}
-                            </Badge>
-                          ))}
-                        </div>
-                      </div>
-                      
-                      <div className="flex items-center gap-2 pt-2">
-                        <Button variant="outline" size="sm" className="flex-1">
-                          <ExternalLink className="h-4 w-4 mr-2" />
-                          Contactar Distribuidor
-                        </Button>
-                      </div>
-                    </CardContent>
-                  </Card>
-                ))}
-              </div>
+              <Card className="max-w-4xl mx-auto">
+                <CardHeader>
+                  <CardTitle className="text-2xl text-center">Distribuição Internacional</CardTitle>
+                  <CardDescription className="text-center text-lg">
+                    Oportunidades de exclusividade territorial para distribuidores qualificados
+                  </CardDescription>
+                </CardHeader>
+                <CardContent className="space-y-6">
+                  <div className="grid md:grid-cols-2 gap-6">
+                    <div>
+                      <h4 className="font-semibold mb-3 flex items-center gap-2">
+                        <Globe className="h-5 w-5 text-primary" />
+                        Territórios Disponíveis:
+                      </h4>
+                      <ul className="space-y-2">
+                        <li className="flex items-center gap-2">
+                          <div className="w-1.5 h-1.5 bg-primary rounded-full" />
+                          <span className="text-sm">Espanha e mercado hispânico</span>
+                        </li>
+                        <li className="flex items-center gap-2">
+                          <div className="w-1.5 h-1.5 bg-primary rounded-full" />
+                          <span className="text-sm">França e países francófonos</span>
+                        </li>
+                        <li className="flex items-center gap-2">
+                          <div className="w-1.5 h-1.5 bg-primary rounded-full" />
+                          <span className="text-sm">Alemanha e Europa Central</span>
+                        </li>
+                        <li className="flex items-center gap-2">
+                          <div className="w-1.5 h-1.5 bg-primary rounded-full" />
+                          <span className="text-sm">Itália e mercado mediterrâneo</span>
+                        </li>
+                      </ul>
+                    </div>
+                    <div>
+                      <h4 className="font-semibold mb-3 flex items-center gap-2">
+                        <Award className="h-5 w-5 text-primary" />
+                        Requisitos:
+                      </h4>
+                      <ul className="space-y-2">
+                        <li className="flex items-center gap-2">
+                          <div className="w-1.5 h-1.5 bg-primary rounded-full" />
+                          <span className="text-sm">Experiência em dispositivos médicos</span>
+                        </li>
+                        <li className="flex items-center gap-2">
+                          <div className="w-1.5 h-1.5 bg-primary rounded-full" />
+                          <span className="text-sm">Rede estabelecida (farmácias/hospitais)</span>
+                        </li>
+                        <li className="flex items-center gap-2">
+                          <div className="w-1.5 h-1.5 bg-primary rounded-full" />
+                          <span className="text-sm">Certificações regulamentares locais</span>
+                        </li>
+                        <li className="flex items-center gap-2">
+                          <div className="w-1.5 h-1.5 bg-primary rounded-full" />
+                          <span className="text-sm">Capacidade logística adequada</span>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  
+                  <div className="text-center pt-4">
+                    <Button size="lg" className="bg-primary hover:bg-primary/90">
+                      <Mail className="mr-2 h-5 w-5" />
+                      Enviar Email: distribuicao@makelife.eu
+                    </Button>
+                  </div>
+                </CardContent>
+              </Card>
             </TabsContent>
 
             {/* Professional Channels */}
@@ -499,26 +453,39 @@ const OndeComprar = () => {
         </div>
       </section>
 
-      {/* Contact Section */}
+      {/* Contact Partnership */}
       <section className="py-16 bg-muted/50">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl font-bold mb-6">Não Encontra o que Procura?</h2>
+            <h2 className="text-3xl font-bold mb-6">Pronto para Ser Nosso Parceiro?</h2>
             <p className="text-xl text-muted-foreground mb-8">
-              A nossa equipa comercial está pronta para o ajudar a encontrar o canal 
-              de venda mais adequado às suas necessidades.
+              Entre em contacto connosco e descubra como podemos crescer juntos. 
+              Respondemos a todas as propostas de parceria em 24 horas.
             </p>
             
-            <div className="grid md:grid-cols-2 gap-6">
+            <div className="grid md:grid-cols-3 gap-6">
+              <Card>
+                <CardHeader>
+                  <CardTitle className="flex items-center gap-2">
+                    <Mail className="h-5 w-5" />
+                    Email Geral
+                  </CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-lg font-semibold mb-2">parcerias@makelife.eu</p>
+                  <p className="text-sm text-muted-foreground">Para todas as propostas</p>
+                </CardContent>
+              </Card>
+
               <Card>
                 <CardHeader>
                   <CardTitle className="flex items-center gap-2">
                     <Phone className="h-5 w-5" />
-                    Apoio Comercial
+                    Telefone Direto
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-lg font-semibold mb-2">+351 800 200 100</p>
+                  <p className="text-lg font-semibold mb-2">+351 800 200 500</p>
                   <p className="text-sm text-muted-foreground">Segunda a Sexta: 9h-18h</p>
                 </CardContent>
               </Card>
@@ -526,13 +493,13 @@ const OndeComprar = () => {
               <Card>
                 <CardHeader>
                   <CardTitle className="flex items-center gap-2">
-                    <Globe className="h-5 w-5" />
-                    Novos Parceiros
+                    <Clock className="h-5 w-5" />
+                    Resposta Rápida
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-lg font-semibold mb-2">parcerias@makelife.eu</p>
-                  <p className="text-sm text-muted-foreground">Interessado em ser parceiro?</p>
+                  <p className="text-lg font-semibold mb-2">24 Horas</p>
+                  <p className="text-sm text-muted-foreground">Garantia de resposta</p>
                 </CardContent>
               </Card>
             </div>
