@@ -9,6 +9,7 @@ import Index from "./pages/Index";
 import Loja from "./pages/Loja";
 import ProdutosProfissionais from "./pages/ProdutosProfissionais";
 import OndeComprar from "./pages/OndeComprar";
+import Contacto from "./pages/Contacto";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -35,7 +36,7 @@ const App = () => (
           <Route path="/parcerias" element={<OndeComprar />} />
           <Route path="/suporte" element={<div className="min-h-screen flex items-center justify-center"><h1 className="text-2xl">Apoio ao Cliente - Em Desenvolvimento</h1></div>} />
           <Route path="/sobre" element={<div className="min-h-screen flex items-center justify-center"><h1 className="text-2xl">Sobre Nós - Em Desenvolvimento</h1></div>} />
-          <Route path="/contato" element={<div className="min-h-screen flex items-center justify-center"><h1 className="text-2xl">Contacto - Em Desenvolvimento</h1></div>} />
+          <Route path="/contato" element={<Contacto />} />
           
           {/* Páginas legais */}
           <Route path="/politica-privacidade" element={<div className="min-h-screen flex items-center justify-center"><h1 className="text-2xl">Política de Privacidade - Em Desenvolvimento</h1></div>} />
