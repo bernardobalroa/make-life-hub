@@ -8,6 +8,7 @@ import { HelmetProvider } from "react-helmet-async";
 import Index from "./pages/Index";
 import Loja from "./pages/Loja";
 import ProdutosProfissionais from "./pages/ProdutosProfissionais";
+import OndeComprar from "./pages/OndeComprar";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -31,7 +32,7 @@ const App = () => (
           <Route path="/loja" element={<Loja />} />
           <Route path="/produtos" element={<div className="min-h-screen flex items-center justify-center"><h1 className="text-2xl">Produtos - Em Desenvolvimento</h1></div>} />
           <Route path="/blog" element={<div className="min-h-screen flex items-center justify-center"><h1 className="text-2xl">Blog de Saúde - Em Desenvolvimento</h1></div>} />
-          <Route path="/parcerias" element={<div className="min-h-screen flex items-center justify-center"><h1 className="text-2xl">Parcerias - Em Desenvolvimento</h1></div>} />
+          <Route path="/parcerias" element={<OndeComprar />} />
           <Route path="/suporte" element={<div className="min-h-screen flex items-center justify-center"><h1 className="text-2xl">Apoio ao Cliente - Em Desenvolvimento</h1></div>} />
           <Route path="/sobre" element={<div className="min-h-screen flex items-center justify-center"><h1 className="text-2xl">Sobre Nós - Em Desenvolvimento</h1></div>} />
           <Route path="/contato" element={<div className="min-h-screen flex items-center justify-center"><h1 className="text-2xl">Contacto - Em Desenvolvimento</h1></div>} />
