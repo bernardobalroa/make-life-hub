@@ -28,55 +28,63 @@ export const productsData: Product[] = [
     sku: 'PAMK0008',
     name: 'Proctowash',
     shortDescription: 'Sabonete líquido íntimo especializado com Bioextracts Active',
-    description: 'Sabonete líquido íntimo desenvolvido com Bioextracts Active e AlphaProtect Organic, formulado com pH ideal para a região anal. Proporciona limpeza suave com ação calmante e anti-inflamatória.',
+    description: 'Sabonete líquido íntimo desenvolvido especificamente para limpeza anal com Bioextracts Active e AlphaProtect Organic. Formulado com pH ideal para a região anal, proporciona limpeza suave e profunda com ação calmante, anti-inflamatória e hidratante. Proctologicamente testado para garantir máxima segurança e eficácia.',
     price: 17.50,
     category: 'higiene-intima',
     slug: 'proctowash',
     packInfo: 'Frasco pump 200ml',
     features: [
       'Bioextracts Active para máxima eficácia',
-      'AlphaProtect Organic - proteção natural',
-      'pH ideal para a região íntima',
-      'Ação calmante e anti-inflamatória',
-      'Frasco pump para aplicação fácil',
-      'Fórmula dermatologicamente testada'
+      'AlphaProtect Organic - proteção natural avançada',
+      'pH ideal específico para a região anal',
+      'Ação calmante e anti-inflamatória comprovada',
+      'Hidratação profunda da pele sensível',
+      'Limpeza suave sem ressecamento',
+      'Frasco pump para aplicação higiénica',
+      'Proctologicamente testado',
+      'Fórmula dermatologicamente aprovada'
     ],
     inStock: true,
     technicalSpecs: {
-      ph: '5.5 - 6.0',
+      ph: '5.5 - 6.0 (ideal para região anal)',
       volume: '200ml',
-      activeIngredients: ['Bioextracts Active', 'AlphaProtect Organic'],
-      usage: 'Aplicar pequena quantidade na região, massajar suavemente e enxaguar com água'
+      activeIngredients: ['Bioextracts Active', 'AlphaProtect Organic', 'Agentes hidratantes'],
+      usage: 'Aplicar pequena quantidade na região anal, massajar suavemente e enxaguar com água morna'
     },
-    certifications: ['Dermatologicamente testado', 'Aprovação CE', 'Hipoalergénico'],
-    targetAudience: ['Adultos com desconforto proctológico', 'Higiene diária', 'Cuidados preventivos']
+    certifications: ['Proctologicamente testado', 'Dermatologicamente testado', 'Aprovação CE', 'Hipoalergénico'],
+    targetAudience: ['Higiene anal especializada', 'Desconforto proctológico', 'Higiene diária', 'Cuidados preventivos']
   },
   {
     id: 'wipewash-premium',
     sku: 'PAMK0009',
     name: 'WipeWash Premium',
-    shortDescription: 'Toalhitas húmidas premium com BIOSACCHARIDES ACTIVE',
-    description: 'Toalhitas húmidas premium especialmente desenvolvidas para higiene íntima da região anal. Fórmula sem perfume com BIOSACCHARIDES ACTIVE para hidratação imediata e ação calmante.',
+    shortDescription: 'Toalha umedecida premium exclusiva para limpeza e higienização perianal',
+    description: 'Toalha umedecida premium exclusiva para limpeza e higienização perianal, com pH ideal para o ânus. WIPEWASH é livre de perfume e com tecnologia BIOSACCHARIDES ACTIVE. Ação hidratante imediata e calmante. Proctologicamente testado. Produto indicado para uso diário, pacientes pós-cirúrgicos, pacientes em tratamento de doenças orificiais e pacientes com sensibilização anal.',
     price: 13.50,
     category: 'higiene-intima',
     slug: 'wipewash-premium',
     packInfo: 'Embalagem com 20 toalhitas',
     features: [
-      'BIOSACCHARIDES ACTIVE para hidratação',
-      'Fórmula sem perfume e hipoalergénica',
-      'Hidratação imediata da pele',
-      'Ação calmante e refrescante',
-      'Embalagem portátil e discreta',
-      'Biodegradáveis e eco-friendly'
+      'Sem perfume - hipoalergénico',
+      'Ação calmante e anti-inflamatória',
+      'Promove hidratação profunda',
+      'Age na reparação dérmica',
+      'Tecnologia da limpeza imediata',
+      'pH ideal para o ânus',
+      'Proctologicamente testado',
+      'Indicado para uso diário',
+      'Ideal para pacientes pós-cirúrgicos',
+      'Para tratamento de doenças orificiais'
     ],
     inStock: true,
     technicalSpecs: {
+      ph: 'pH ideal para região anal',
       volume: '20 unidades',
-      activeIngredients: ['BIOSACCHARIDES ACTIVE', 'Extrato de aloe vera', 'Vitamina E'],
-      usage: 'Usar conforme necessário para limpeza e hidratação suave da região'
+      activeIngredients: ['BIOSACCHARIDES ACTIVE', 'Ingredientes calmantes', 'Agentes hidratantes'],
+      usage: 'Usar conforme necessário para limpeza e higienização perianal. Ideal para uso diário'
     },
-    certifications: ['Dermatologicamente testado', 'Biodegradável', 'Hipoalergénico'],
-    targetAudience: ['Pessoas ativas', 'Viajantes', 'Pós-cirurgia proctológica']
+    certifications: ['Proctologicamente testado', 'Dermatologicamente testado', 'Biodegradável', 'Hipoalergénico'],
+    targetAudience: ['Uso diário', 'Pacientes pós-cirúrgicos', 'Tratamento de doenças orificiais', 'Sensibilização anal']
   },
   {
     id: 'hidraenema-pro',
