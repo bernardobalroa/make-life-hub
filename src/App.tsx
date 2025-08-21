@@ -8,8 +8,10 @@ import { HelmetProvider } from "react-helmet-async";
 import Index from "./pages/Index";
 import Loja from "./pages/Loja";
 import ProdutosProfissionais from "./pages/ProdutosProfissionais";
+import ProfissionaisSaude from "./pages/ProfissionaisSaude";
 import OndeComprar from "./pages/OndeComprar";
 import Contacto from "./pages/Contacto";
+import Sobre from "./pages/Sobre";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -25,7 +27,7 @@ const App = () => (
           <Route path="/" element={<Index />} />
           
           {/* Placeholder routes - serão implementadas em futuras iterações */}
-          <Route path="/institucional" element={<div className="min-h-screen flex items-center justify-center"><h1 className="text-2xl">Página Institucional - Em Desenvolvimento</h1></div>} />
+          <Route path="/institucional" element={<ProfissionaisSaude />} />
           <Route path="/produtos-profissionais" element={<ProdutosProfissionais />} />
           <Route path="/ciencia" element={<div className="min-h-screen flex items-center justify-center"><h1 className="text-2xl">Ciência e Inovação - Em Desenvolvimento</h1></div>} />
           <Route path="/distribuicao" element={<div className="min-h-screen flex items-center justify-center"><h1 className="text-2xl">Distribuição - Em Desenvolvimento</h1></div>} />
@@ -35,7 +37,7 @@ const App = () => (
           <Route path="/blog" element={<div className="min-h-screen flex items-center justify-center"><h1 className="text-2xl">Blog de Saúde - Em Desenvolvimento</h1></div>} />
           <Route path="/parcerias" element={<OndeComprar />} />
           <Route path="/suporte" element={<div className="min-h-screen flex items-center justify-center"><h1 className="text-2xl">Apoio ao Cliente - Em Desenvolvimento</h1></div>} />
-          <Route path="/sobre" element={<div className="min-h-screen flex items-center justify-center"><h1 className="text-2xl">Sobre Nós - Em Desenvolvimento</h1></div>} />
+          <Route path="/sobre" element={<Sobre />} />
           <Route path="/contato" element={<Contacto />} />
           
           {/* Páginas legais */}
