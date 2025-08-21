@@ -12,6 +12,7 @@ import ProfissionaisSaude from "./pages/ProfissionaisSaude";
 import OndeComprar from "./pages/OndeComprar";
 import Contacto from "./pages/Contacto";
 import Sobre from "./pages/Sobre";
+import CienciaInvestigacao from "./pages/CienciaInvestigacao";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -29,7 +30,7 @@ const App = () => (
           {/* Placeholder routes - serão implementadas em futuras iterações */}
           <Route path="/institucional" element={<ProfissionaisSaude />} />
           <Route path="/produtos-profissionais" element={<ProdutosProfissionais />} />
-          <Route path="/ciencia" element={<div className="min-h-screen flex items-center justify-center"><h1 className="text-2xl">Ciência e Inovação - Em Desenvolvimento</h1></div>} />
+          <Route path="/ciencia" element={<CienciaInvestigacao />} />
           <Route path="/distribuicao" element={<div className="min-h-screen flex items-center justify-center"><h1 className="text-2xl">Distribuição - Em Desenvolvimento</h1></div>} />
           <Route path="/blog-tecnico" element={<div className="min-h-screen flex items-center justify-center"><h1 className="text-2xl">Blog Técnico - Em Desenvolvimento</h1></div>} />
           <Route path="/loja" element={<Loja />} />
