@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
-import { ShoppingCart, Menu, X, ChevronDown, Users, User, LogIn, Facebook, Instagram, Linkedin } from 'lucide-react';
+import { Menu, X, Users, User, LogIn } from 'lucide-react';
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -113,38 +113,17 @@ const Header = () => {
             </NavigationMenuList>
           </NavigationMenu>
 
-          {/* Right Actions */}
-          <div className="flex items-center space-x-4">
-            {/* Follow Us - Redes Sociais */}
-            <div className="hidden lg:flex items-center space-x-2">
-              <a href="#" className="text-makelife-teal-dark hover:text-makelife-teal transition-colors">
-                <Facebook className="w-4 h-4" />
-              </a>
-              <a href="#" className="text-makelife-teal-dark hover:text-makelife-teal transition-colors">
-                <Instagram className="w-4 h-4" />
-              </a>
-              <a href="#" className="text-makelife-teal-dark hover:text-makelife-teal transition-colors">
-                <Linkedin className="w-4 h-4" />
-              </a>
-            </div>
-
-            {/* CTA Button - Loja Online em destaque */}
+          {/* Right Actions - Simplified and Clean */}
+          <div className="flex items-center space-x-3">
+            {/* Loja Online - Primary CTA */}
             <Link to="/loja">
-              <Button className="hidden md:flex bg-makelife-teal hover:bg-makelife-teal-dark">
+              <Button className="hidden md:flex bg-makelife-teal hover:bg-makelife-teal-dark text-white font-medium">
                 Loja Online
               </Button>
             </Link>
 
-            {/* Shopping Cart */}
-            <Button variant="outline" size="sm" className="relative">
-              <ShoppingCart className="w-4 h-4" />
-              <span className="absolute -top-2 -right-2 bg-makelife-teal text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">
-                0
-              </span>
-            </Button>
-
-            {/* Login Button - Destaque principal */}
-            <Button size="sm" className="bg-makelife-teal hover:bg-makelife-teal-dark text-white font-medium">
+            {/* Login Button - Secondary */}
+            <Button variant="outline" size="sm" className="border-makelife-teal text-makelife-teal hover:bg-makelife-teal hover:text-white">
               <LogIn className="w-4 h-4 mr-2" />
               Entrar
             </Button>
@@ -206,6 +185,11 @@ const Header = () => {
               <div className="space-y-2 pt-4 border-t">
                 <Link to="/sobre" className="block text-makelife-teal-dark hover:text-makelife-teal font-medium">
                   Sobre Nós
+                </Link>
+                <Link to="/loja" className="block">
+                  <Button className="w-full bg-makelife-teal hover:bg-makelife-teal-dark text-white mb-2">
+                    Loja Online
+                  </Button>
                 </Link>
                 <Button variant="outline" size="sm" className="w-full border-makelife-teal text-makelife-teal">
                   <LogIn className="w-4 h-4 mr-2" />

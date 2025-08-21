@@ -21,16 +21,21 @@ const Footer = () => {
               A 1ª marca em saúde proctológica e na higiene e cuidados da região anal. 
               Inovação científica ao serviço do seu bem-estar.
             </p>
-            <div className="flex space-x-3">
-              <a href="#" className="text-gray-300 hover:text-makelife-teal transition-colors">
-                <Facebook className="w-5 h-5" />
-              </a>
-              <a href="#" className="text-gray-300 hover:text-makelife-teal transition-colors">
-                <Instagram className="w-5 h-5" />
-              </a>
-              <a href="#" className="text-gray-300 hover:text-makelife-teal transition-colors">
-                <Linkedin className="w-5 h-5" />
-              </a>
+            
+            {/* Social Media Section - Highlighted */}
+            <div className="mt-6">
+              <h4 className="text-sm font-semibold text-makelife-teal mb-3">Siga-nos</h4>
+              <div className="flex space-x-4">
+                <a href="#" className="text-gray-300 hover:text-makelife-teal transition-colors p-2 bg-makelife-teal/20 rounded-lg hover:bg-makelife-teal/30">
+                  <Facebook className="w-5 h-5" />
+                </a>
+                <a href="#" className="text-gray-300 hover:text-makelife-teal transition-colors p-2 bg-makelife-teal/20 rounded-lg hover:bg-makelife-teal/30">
+                  <Instagram className="w-5 h-5" />
+                </a>
+                <a href="#" className="text-gray-300 hover:text-makelife-teal transition-colors p-2 bg-makelife-teal/20 rounded-lg hover:bg-makelife-teal/30">
+                  <Linkedin className="w-5 h-5" />
+                </a>
+              </div>
             </div>
           </div>
 

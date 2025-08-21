@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { Button } from '@/components/ui/button';
-import { ArrowRight, Users, User, Award, Shield, ShoppingCart } from 'lucide-react';
+import { ArrowRight, Users, User, Award, Shield } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const HeroSection = () => {
@@ -89,7 +89,6 @@ const HeroSection = () => {
 
                 <Link to="/loja" className="block">
                   <Button size="lg" className="w-full bg-makelife-teal hover:bg-makelife-teal-dark group">
-                    <ShoppingCart className="w-5 h-5 mr-2" />
                     Aceder à Loja Online
                     <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
                   </Button>
