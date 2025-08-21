@@ -7,6 +7,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
 import Index from "./pages/Index";
 import Loja from "./pages/Loja";
+import ProdutosProfissionais from "./pages/ProdutosProfissionais";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -23,7 +24,7 @@ const App = () => (
           
           {/* Placeholder routes - serão implementadas em futuras iterações */}
           <Route path="/institucional" element={<div className="min-h-screen flex items-center justify-center"><h1 className="text-2xl">Página Institucional - Em Desenvolvimento</h1></div>} />
-          <Route path="/produtos-profissionais" element={<div className="min-h-screen flex items-center justify-center"><h1 className="text-2xl">Produtos Profissionais - Em Desenvolvimento</h1></div>} />
+          <Route path="/produtos-profissionais" element={<ProdutosProfissionais />} />
           <Route path="/ciencia" element={<div className="min-h-screen flex items-center justify-center"><h1 className="text-2xl">Ciência e Inovação - Em Desenvolvimento</h1></div>} />
           <Route path="/distribuicao" element={<div className="min-h-screen flex items-center justify-center"><h1 className="text-2xl">Distribuição - Em Desenvolvimento</h1></div>} />
           <Route path="/blog-tecnico" element={<div className="min-h-screen flex items-center justify-center"><h1 className="text-2xl">Blog Técnico - Em Desenvolvimento</h1></div>} />
