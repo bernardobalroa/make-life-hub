@@ -44,8 +44,8 @@ const Sobre = () => {
     },
     {
       year: "2023",
-      title: "Liderança Europeia",
-      description: "Estabelecimento como 1ª marca em saúde proctológica na Europa"
+      title: "Liderança Brasileira",
+      description: "Estabelecimento como 1ª marca em saúde proctológica no Brasil"
     },
     {
       year: "2024",
@@ -116,9 +116,9 @@ const Sobre = () => {
 
   const certifications = [
     {
-      title: "CE Medical Device",
-      description: "Certificação Classe IIa para dispositivos médicos",
-      authority: "Organismo Notificado Europeu"
+      title: "ANVISA",
+      description: "Registo de dispositivo médico Classe II",
+      authority: "Agência Nacional de Vigilância Sanitária"
     },
     {
       title: "ISO 13485",
@@ -126,14 +126,14 @@ const Sobre = () => {
       authority: "International Organization for Standardization"
     },
     {
-      title: "GMP",
-      description: "Boas Práticas de Fabrico",
-      authority: "INFARMED - Autoridade Nacional"
+      title: "BPF",
+      description: "Boas Práticas de Fabricação",
+      authority: "ANVISA - Agência Nacional"
     },
     {
-      title: "INFARMED",
-      description: "Registo e autorização nacional",
-      authority: "Autoridade Nacional do Medicamento"
+      title: "Certificação Nacional",
+      description: "Conformidade com regulamentação brasileira",
+      authority: "Autoridades Sanitárias do Brasil"
     }
   ];
 
@@ -148,8 +148,8 @@ const Sobre = () => {
     <div className="min-h-screen bg-background">
       <Helmet>
         <title>Sobre a MakeLife - Inovação em Saúde Proctológica e Bem-estar</title>
-        <meta name="description" content="Conheça a MakeLife: empresa portuguesa pioneira em soluções proctológicas inovadoras. A nossa missão, valores, equipa científica e compromisso com a excelência médica." />
-        <meta name="keywords" content="sobre makelife, empresa proctologia, inovação médica portugal, dispositivos médicos, equipa científica" />
+        <meta name="description" content="Conheça a MakeLife: empresa brasileira pioneira em soluções proctológicas inovadoras. A nossa missão, valores, equipa científica e compromisso com a excelência médica." />
+        <meta name="keywords" content="sobre makelife, empresa proctologia, inovação médica brasil, dispositivos médicos, equipa científica" />
       </Helmet>
 
       <Header />
@@ -159,14 +159,14 @@ const Sobre = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <Badge className="mb-6 bg-white/20 text-white border-white/30 hover:bg-white/30">
-              Empresa Portuguesa Inovadora
+              Empresa Brasileira Inovadora
             </Badge>
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
               Quem Somos
               <span className="block text-white/90">MakeLife</span>
             </h1>
             <p className="text-xl md:text-2xl mb-8 text-white/90 max-w-3xl mx-auto">
-              Somos uma empresa portuguesa dedicada ao desenvolvimento de soluções inovadoras 
+              Somos uma empresa brasileira dedicada ao desenvolvimento de soluções inovadoras 
               para a saúde proctológica, combinando ciência, tecnologia e cuidado humano.
             </p>
           </div>
@@ -216,14 +216,14 @@ const Sobre = () => {
             <div>
               <h2 className="text-3xl md:text-4xl font-bold mb-6">A Nossa Visão</h2>
               <p className="text-lg text-muted-foreground mb-6">
-                Ser a empresa de referência europeia em soluções proctológicas inovadoras, 
+                Ser a empresa de referência brasileira em soluções proctológicas inovadoras, 
                 reconhecida pela excelência científica, qualidade dos produtos e impacto 
                 positivo na vida dos utilizadores.
               </p>
               <div className="space-y-4">
                 <div className="flex items-start gap-3">
                   <Target className="h-5 w-5 text-primary mt-1 flex-shrink-0" />
-                  <span className="text-muted-foreground">Liderança no mercado europeu de proctologia</span>
+                  <span className="text-muted-foreground">Liderança no mercado brasileiro de proctologia</span>
                 </div>
                 <div className="flex items-start gap-3">
                   <Target className="h-5 w-5 text-primary mt-1 flex-shrink-0" />
