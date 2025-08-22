@@ -28,34 +28,29 @@ import {
 const Sobre = () => {
   const milestones = [
     {
-      year: "2018",
+      year: "2021",
       title: "Fundação da MakeLife",
-      description: "Início da investigação em soluções proctológicas inovadoras"
-    },
-    {
-      year: "2020",
-      title: "Primeiro Produto Lançado",
-      description: "Hidraenema - revolucionando a higiene proctológica"
+      description: "Fundada como braço do centro tecnológico Makelab, pioneiros em investigação científica dedicada aos cuidados da região anal"
     },
     {
       year: "2021",
-      title: "Certificação CE Medical",
-      description: "Obtenção da certificação CE Medical Device Classe IIa"
+      title: "Investigação e Desenvolvimento",
+      description: "Início do desenvolvimento de produtos patenteados com tecnologia inovadora própria"
     },
     {
       year: "2022",
-      title: "Expansão Europeia",
-      description: "Início da distribuição em mercados europeus"
+      title: "Primeiras Patentes",
+      description: "Registo das primeiras patentes em tecnologia de hidratação prolongada"
     },
     {
       year: "2023",
-      title: "Gama Profissional",
-      description: "Lançamento de produtos específicos para profissionais de saúde"
+      title: "Liderança Europeia",
+      description: "Estabelecimento como 1ª marca em saúde proctológica na Europa"
     },
     {
       year: "2024",
       title: "Inovação Contínua",
-      description: "Novos produtos e parcerias estratégicas"
+      description: "Mais de 5 patentes requeridas e tecnologia de 72h de hidratação prolongada"
     }
   ];
 
@@ -143,10 +138,10 @@ const Sobre = () => {
   ];
 
   const stats = [
-    { value: "50.000+", label: "Utilizadores Satisfeitos" },
-    { value: "95%", label: "Taxa de Eficácia" },
-    { value: "12", label: "Países de Distribuição" },
-    { value: "6", label: "Anos de Investigação" }
+    { value: "2021", label: "Ano de Fundação" },
+    { value: "5+", label: "Patentes Requeridas" },
+    { value: "100%", label: "I&D Próprio" },
+    { value: "72h", label: "Hidratação Prolongada" }
   ];
 
   return (
@@ -277,10 +272,10 @@ const Sobre = () => {
       <section className="py-16">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">A Nossa Jornada</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">Ciência e Inovação</h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Desde a fundação, temos percorrido um caminho de crescimento sustentado, 
-              inovação e compromisso com a excelência.
+              Investigação e Desenvolvimento Próprio - pioneiros em investigação científica dedicada aos cuidados da região anal, 
+              desenvolvendo produtos patenteados com tecnologia inovadora.
             </p>
           </div>
 
