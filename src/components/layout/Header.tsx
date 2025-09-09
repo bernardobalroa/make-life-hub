@@ -25,15 +25,15 @@ const Header: React.FC = () => {
   const menuItems = {
     particulares: [
       { href: '/loja', label: t('nav.loja') },
-      { href: '/produtos', label: 'Produtos' },
-      { href: '/blog-saude', label: 'Blog de Saúde', placeholder: true },
+      { href: '/produtos', label: t('menu.produtos') },
+      { href: '/blog-saude', label: t('menu.blog.saude'), placeholder: true },
     ],
     profissionais: [
-      { href: '/profissionais/quem-somos', label: 'Quem Somos' },
-      { href: '/profissionais/ciencia-inovacao', label: 'Ciência e Inovação' },
-      { href: '/profissionais/produtos-brochura', label: 'Produtos – Brochura' },
-      { href: '/profissionais/distribuicao', label: 'Distribuição' },
-      { href: '/profissionais/contactos', label: 'Contactos Profissionais' },
+      { href: '/profissionais/quem-somos', label: t('menu.quem.somos') },
+      { href: '/profissionais/ciencia-inovacao', label: t('menu.ciencia.inovacao') },
+      { href: '/profissionais/produtos-brochura', label: t('menu.produtos.brochura') },
+      { href: '/profissionais/distribuicao', label: t('menu.distribuicao') },
+      { href: '/profissionais/contactos', label: t('menu.contactos.profissionais') },
     ],
   };
 
@@ -74,7 +74,7 @@ const Header: React.FC = () => {
                           className="block p-2 text-sm rounded hover:bg-accent hover:text-accent-foreground"
                         >
                           {item.label}
-                          {item.placeholder && <span className="ml-2 text-xs">(Em breve)</span>}
+                          {item.placeholder && <span className="ml-2 text-xs">{t('menu.coming.soon')}</span>}
                         </Link>
                       </NavigationMenuLink>
                     ))}
@@ -171,7 +171,7 @@ const Header: React.FC = () => {
                                 }`}
                               >
                                 {item.label}
-                                {item.placeholder && <span className="ml-2 text-xs">(Em breve)</span>}
+                                {item.placeholder && <span className="ml-2 text-xs">{t('menu.coming.soon')}</span>}
                               </Link>
                             ))}
                           </div>

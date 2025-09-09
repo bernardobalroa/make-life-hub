@@ -25,8 +25,16 @@ const Index: React.FC = () => {
   ];
 
   const markets = [
-    { icon: Globe, label: t('metrics.markets.europe'), description: 'Europa' },
-    { icon: Globe, label: t('metrics.markets.uk'), description: 'Reino Unido' },
+    { 
+      icon: Globe, 
+      label: t('metrics.markets.europe'), 
+      description: t('metrics.markets.europe.desc')
+    },
+    { 
+      icon: Globe, 
+      label: t('metrics.markets.uk'), 
+      description: t('metrics.markets.uk.desc')
+    },
   ];
 
   const trustSeals = [
@@ -36,22 +44,22 @@ const Index: React.FC = () => {
 
   const promotions = [
     {
-      title: 'Chuka Pop - Kit Completo',
-      description: 'Solução completa para higiene íntima anal',
+      title: t('promotion.chuka.title'),
+      description: t('promotion.chuka.desc'),
       image: '/placeholder-product.jpg',
-      price: 'A partir de €29.90',
+      price: t('promotion.price.from') + ' €29.90',
     },
     {
-      title: 'Proctowash + WipeWash',
-      description: 'Combo perfeito para cuidados diários',
+      title: t('promotion.combo.title'),
+      description: t('promotion.combo.desc'),
       image: '/placeholder-product.jpg',
-      price: 'A partir de €19.90',
+      price: t('promotion.price.from') + ' €19.90',
     },
     {
-      title: 'Hidraenema Professional',
-      description: 'Para uso profissional e doméstico',
+      title: t('promotion.hidraenema.title'),
+      description: t('promotion.hidraenema.desc'),
       image: '/placeholder-product.jpg',
-      price: 'A partir de €39.90',
+      price: t('promotion.price.from') + ' €39.90',
     },
   ];
 
@@ -69,19 +77,8 @@ const Index: React.FC = () => {
   return (
     <div className="min-h-screen bg-background">
       <Helmet>
-        <title>
-          {language === 'pt' 
-            ? 'Make Life Internacional — Pioneiros em Saúde Proctológica | Produtos para região anal e retal'
-            : 'Make Life Internacional — Pioneers in Proctological Health | Products for anal and rectal care'
-          }
-        </title>
-        <meta 
-          name="description" 
-          content={language === 'pt'
-            ? 'Líder europeu em soluções proctológicas inovadoras. Produtos patenteados para cuidados da região anal e retal. Aprovação CE. Fundada em 2021.'
-            : 'European leader in innovative proctological solutions. Patented products for anal and rectal care. CE approved. Founded in 2021.'
-          }
-        />
+        <title>{t('meta.title')}</title>
+        <meta name="description" content={t('meta.description')} />
         <meta name="keywords" content="saúde proctológica, produtos anais, higiene retal, Make Life Internacional, dispositivos médicos" />
       </Helmet>
 
@@ -94,7 +91,7 @@ const Index: React.FC = () => {
             <div className="space-y-8">
               <div>
                 <Badge className="mb-4 bg-primary/10 text-primary border-primary/20">
-                  Inovação Médica 2024
+                  {t('home.hero.badge')}
                 </Badge>
                 <h1 className="text-4xl md:text-6xl font-bold tracking-tight mb-6">
                   {t('home.hero.title')}
@@ -126,7 +123,7 @@ const Index: React.FC = () => {
                   <div className="text-center">
                     <div className="text-6xl mb-4">🏥</div>
                     <p className="text-lg font-medium text-muted-foreground">
-                      Produtos Patenteados
+                      {t('home.hero.products.label')}
                     </p>
                   </div>
                 </div>
@@ -193,7 +190,7 @@ const Index: React.FC = () => {
           <div className="grid md:grid-cols-2 gap-16">
             {/* Metrics */}
             <div>
-              <h3 className="text-2xl font-bold mb-8">A Nossa Jornada</h3>
+              <h3 className="text-2xl font-bold mb-8">{t('home.journey.title')}</h3>
               <div className="space-y-6">
                 {metrics.map((metric, index) => (
                   <div key={index} className="flex items-center space-x-4">
@@ -211,7 +208,7 @@ const Index: React.FC = () => {
 
             {/* Markets */}
             <div>
-              <h3 className="text-2xl font-bold mb-8">Mercados</h3>
+              <h3 className="text-2xl font-bold mb-8">{t('home.markets.title')}</h3>
               <div className="grid gap-4">
                 {markets.map((market, index) => (
                   <Card key={index} className="p-6">
@@ -251,10 +248,10 @@ const Index: React.FC = () => {
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Promoções em Destaque
+              {t('home.promotions.title')}
             </h2>
             <p className="text-lg text-muted-foreground">
-              Aproveite as nossas ofertas especiais
+              {t('home.promotions.subtitle')}
             </p>
           </div>
 
@@ -271,7 +268,7 @@ const Index: React.FC = () => {
                 <CardContent>
                   <div className="flex items-center justify-between">
                     <span className="font-semibold text-primary">{promo.price}</span>
-                    <Button size="sm" variant="outline">Ver na Loja</Button>
+                    <Button size="sm" variant="outline">{t('home.promotions.view')}</Button>
                   </div>
                 </CardContent>
               </Card>
@@ -281,7 +278,7 @@ const Index: React.FC = () => {
           <div className="text-center">
             <Button asChild size="lg" variant="outline">
               <Link to="/promocoes">
-                Ver Todas as Promoções
+                {t('home.promotions.cta')}
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
             </Button>
@@ -294,17 +291,17 @@ const Index: React.FC = () => {
         <div className="container mx-auto px-4">
           <div className="text-center">
             <h2 className="text-3xl md:text-4xl font-bold mb-8">
-              Ciência e Inovação
+              {t('home.science.title')}
             </h2>
             <Card className="max-w-md mx-auto p-8">
               <div className="text-center">
                 <TrendingUp className="h-12 w-12 text-primary mx-auto mb-4" />
-                <h3 className="text-xl font-semibold mb-2">Em Breve</h3>
+                <h3 className="text-xl font-semibold mb-2">{t('home.science.coming.title')}</h3>
                 <p className="text-muted-foreground mb-4">
-                  Conteúdo científico e estudos clínicos
+                  {t('home.science.coming.desc')}
                 </p>
                 <Button variant="outline" disabled>
-                  Disponível em breve
+                  {t('home.science.coming.cta')}
                 </Button>
               </div>
             </Card>
