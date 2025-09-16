@@ -5,7 +5,6 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
-import { LanguageProvider } from "./contexts/LanguageContext";
 import Index from "./pages/Index";
 import Loja from "./pages/Loja";
 import ProdutosProfissionais from "./pages/ProdutosProfissionais";
@@ -21,13 +20,12 @@ const queryClient = new QueryClient();
 const App = () => (
   <QueryClientProvider client={queryClient}>
     <HelmetProvider>
-      <LanguageProvider>
-        <TooltipProvider>
-          <Toaster />
-          <Sonner />
-          <BrowserRouter>
-          <Routes>
-            <Route path="/" element={<Index />} />
+      <TooltipProvider>
+        <Toaster />
+        <Sonner />
+        <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Index />} />
           
           {/* Placeholder routes - serão implementadas em futuras iterações */}
           <Route path="/institucional" element={<ProfissionaisSaude />} />
@@ -53,7 +51,6 @@ const App = () => (
         </Routes>
       </BrowserRouter>
     </TooltipProvider>
-   </LanguageProvider>
   </HelmetProvider>
 </QueryClientProvider>
 );
