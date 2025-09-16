@@ -31,7 +31,7 @@ export const productsData: Product[] = [
     description: 'Sabonete líquido íntimo desenvolvido especificamente para limpeza anal com Bioextracts Active e AlphaProtect Organic. Formulado com pH ideal para a região anal, proporciona limpeza suave e profunda com ação calmante, anti-inflamatória e hidratante. Proctologicamente testado para garantir máxima segurança e eficácia.',
     price: 17.50,
     category: 'higiene-intima',
-    image: '/src/assets/products/proctowash.png',
+    image: '/products/proctowash.png',
     slug: 'proctowash',
     packInfo: 'Frasco pump 200ml',
     features: [
@@ -63,7 +63,7 @@ export const productsData: Product[] = [
     description: 'Toalha umedecida premium exclusiva para limpeza e higienização perianal, com pH ideal para o ânus. WIPEWASH é livre de perfume e com tecnologia BIOSACCHARIDES ACTIVE. Ação hidratante imediata e calmante. Proctologicamente testado. Produto indicado para uso diário, pacientes pós-cirúrgicos, pacientes em tratamento de doenças orificiais e pacientes com sensibilização anal.',
     price: 13.50,
     category: 'higiene-intima',
-    image: '/src/assets/products/wipewash.png',
+    image: '/products/wipewash.png',
     slug: 'wipewash-premium',
     packInfo: 'Embalagem com 20 toalhitas',
     features: [
@@ -96,7 +96,7 @@ export const productsData: Product[] = [
     description: 'Hidratante anal profissional com hialuronato de sódio e ácido láctico. Fórmula sem fragrância e sem parabenos que regula o pH e proporciona hidratação por até 72 horas.',
     price: 52.50,
     category: 'hidratacao-anal',
-    image: '/src/assets/products/hidraenema-pro.png',
+    image: '/products/hidraenema-pro.png',
     slug: 'hidraenema-pro',
     packInfo: '10 bisnagas de 3g cada',
     features: [
@@ -124,7 +124,7 @@ export const productsData: Product[] = [
     description: 'Kit completo com hidratante anal formulado com hialuronato de sódio e ácido láctico. Inclui 5 bisnagas de 3g e 5 aplicadores para uso prático e higiénico.',
     price: 26.25,
     category: 'hidratacao-anal',
-    image: '/src/assets/products/hidraenema.png',
+    image: '/products/hidraenema.png',
     slug: 'hidraenema-3g',
     packInfo: '5 bisnagas 3g + 5 aplicadores',
     features: [
@@ -152,7 +152,7 @@ export const productsData: Product[] = [
     description: 'Dispositivo anatómico inovador para higienização anal pré/pós-relações íntimas, apoio em exames médicos e auxílio na obstipação. Design ergonómico que se adapta ao chuveirinho ou garrafa PET.',
     price: 6.50,
     category: 'dispositivos-limpeza',
-    image: '/src/assets/products/chuka-pop.png',
+    image: '/products/chuka-pop.png',
     slug: 'chuka-pop',
     packInfo: '1 unidade com bico aplicador',
     features: [
@@ -178,7 +178,7 @@ export const productsData: Product[] = [
     description: 'Dispositivo especializado para higienização interna do reto com injeção de água. Edição especial Orgulho LGBT, ideal para higienização pré/pós-relações íntimas e preparação para consultas médicas.',
     price: 6.50,
     category: 'dispositivos-limpeza',
-    image: '/src/assets/products/chuka-lgbt.png',
+    image: '/products/chuka-lgbt.png',
     slug: 'chuka-pop-lgbt',
     packInfo: '1 unidade - Edição Orgulho',
     features: [
@@ -204,7 +204,7 @@ export const productsData: Product[] = [
     description: 'Pomada terapêutica especializada para tratamento de hemorroidas e fissuras de períneo. Fórmula anti-inflamatória que proporciona alívio rápido da dor e desconforto.',
     price: 25.00,
     category: 'cuidados-terapeuticos',
-    image: '/src/assets/products/proctofarma.png',
+    image: '/products/proctofarma.png',
     slug: 'proctofarma-hemo',
     packInfo: 'Bisnagas de 3g (dose individual)',
     features: [
@@ -230,7 +230,7 @@ export const productsData: Product[] = [
     description: 'Kit higienizador completo que combina Chuka Pop, Hidraenema Pro, nécessaire elegante e guia completo de uso. Solução premium para limpeza natural do reto e hidratação prolongada.',
     price: 32.75,
     category: 'kits-completos',
-    image: '/src/assets/products/lowash-pro.png',
+    image: '/products/lowash-pro.png',
     slug: 'lowash-pro-kit',
     packInfo: 'Chuka Pop + Hidraenema Pro + nécessaire + guia',
     features: [
