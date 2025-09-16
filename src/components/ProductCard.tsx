@@ -40,9 +40,22 @@ const ProductCard: React.FC<ProductCardProps> = ({
         <div className="aspect-square bg-muted rounded-lg mb-3 overflow-hidden">
           {image ? (
             <img 
-              src={image} 
-              alt={name}
+              src={image || `/products/${id}.png`}
+              alt={`${name} - produto MakeLife`}
+              loading="lazy"
+              width={600}
+              height={600}
               className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+              onError={(e) => {
+                console.warn('Falha ao carregar imagem do produto', { id, name, src: e.currentTarget.src });
+                const tried = e.currentTarget.getAttribute('data-fallback-tried');
+                if (!tried) {
+                  e.currentTarget.setAttribute('data-fallback-tried', '1');
+                  e.currentTarget.src = `/products/${id}.png`;
+                } else {
+                  e.currentTarget.src = '/placeholder.svg';
+                }
+              }}
             />
           ) : (
             <div className="w-full h-full flex items-center justify-center">
