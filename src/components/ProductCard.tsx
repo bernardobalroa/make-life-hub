@@ -38,9 +38,8 @@ const ProductCard: React.FC<ProductCardProps> = ({
     <Card className="group hover:shadow-lg transition-all duration-300 hover-lift">
       <CardHeader className="pb-3">
         <div className="aspect-square bg-muted rounded-lg mb-3 overflow-hidden">
-          {image ? (
             <img 
-              src={image || `/products/${id}.png`}
+              src={image ?? `/products/${id}.png`}
               alt={`${name} - produto MakeLife`}
               loading="lazy"
               width={600}
@@ -49,7 +48,7 @@ const ProductCard: React.FC<ProductCardProps> = ({
               onError={(e) => {
                 console.warn('Falha ao carregar imagem do produto', { id, name, src: e.currentTarget.src });
                 const tried = e.currentTarget.getAttribute('data-fallback-tried');
-                if (!tried) {
+                if (!tried && (image ?? '') !== `/products/${id}.png`) {
                   e.currentTarget.setAttribute('data-fallback-tried', '1');
                   e.currentTarget.src = `/products/${id}.png`;
                 } else {
@@ -57,13 +56,6 @@ const ProductCard: React.FC<ProductCardProps> = ({
                 }
               }}
             />
-          ) : (
-            <div className="w-full h-full flex items-center justify-center">
-              <div className="w-16 h-16 bg-primary/20 rounded-lg flex items-center justify-center">
-                <span className="text-primary font-bold text-xl">ML</span>
-              </div>
-            </div>
-          )}
         </div>
         
         <div className="flex items-start justify-between mb-2">
