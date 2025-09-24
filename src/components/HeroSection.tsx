@@ -18,7 +18,7 @@ const HeroSection = () => {
             <div className="space-y-4">
               <div className="flex items-center justify-center space-x-2 text-makelife-teal">
                 <Award className="w-5 h-5" />
-                <span className="text-sm font-medium">A 1ª marca em saúde proctológica e na higiene e cuidados da região anal</span>
+                <span className="text-sm font-medium">PIONEIROS EM SAÚDE PROTOCOLÓGICA</span>
               </div>
               
               <h1 className="text-4xl lg:text-6xl font-bold leading-tight">
