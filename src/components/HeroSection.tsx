@@ -29,10 +29,9 @@ const HeroSection = () => {
                 <span className="text-makelife-teal-dark">Inovadores</span>
               </h1>
               
-              <p className="text-xl text-makelife-gray-medium max-w-3xl mx-auto">
-                Pioneiros em saúde proctológica e higiene íntima da região anal. 
-                Inovação científica ao serviço do seu bem-estar e conforto.
-              </p>
+               <p className="text-xl text-makelife-gray-medium max-w-3xl mx-auto">
+                PRODUTOS DEDICADOS AOS CUIDADOS DA REGIÃO ANAL E RETAL.
+               </p>
             </div>
 
           {/* Trust Indicators */}
